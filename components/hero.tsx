@@ -1,6 +1,10 @@
 "use client"
 
+import { useLanguage } from "@/context/LanguageContext"
+
 export function Hero() {
+  const { t } = useLanguage()
+
   return (
     <main style={{ 
         padding: "9% 5% 3%",
@@ -14,7 +18,7 @@ export function Hero() {
             color: "#64ffda",
             fontSize: "0.9vw"
           }}>
-            Hi, my name is
+            {t.hero.greeting}
           </p>
         </div>
 
@@ -31,7 +35,7 @@ export function Hero() {
             color: "#8892b0",
             fontSize: "3vw"
           }}>
-            Driven by curiosity, powered by data.
+            {t.hero.tagline}
           </h2>
         </div>
 
@@ -42,10 +46,10 @@ export function Hero() {
           width: "80%",
           lineHeight: "1.6"
         }}>
-          Passionate about data and AI, I'm looking for opportunities as a {" "}
-          <span className="font-semibold" style={{ color: "#64ffda" }}> Data Analyst, Data Scientist or AI Engineer</span>.
-          <br /> I bring one year of hands-on experience in Data engineering and AI analysis.
-          <br /> I am trilingual, speaking Spanish, French, and English.
+          {t.hero.description}{" "}
+          <span className="font-semibold" style={{ color: "#64ffda" }}>{t.hero.role}</span>.
+          <br /> {t.hero.experience}
+          <br /> {t.hero.languages}
         </p>
 
         {/* CTA Button */}
@@ -67,7 +71,7 @@ export function Hero() {
               e.currentTarget.style.backgroundColor = "transparent"
             }}
           >
-            Learn more about my journey !
+            {t.hero.cta}
           </a>
         </div>
       </div>
@@ -75,13 +79,13 @@ export function Hero() {
       {/* Scroll indicator */}
       <div className="flex flex-col items-center" style={{ 
         marginTop: "4%",
-        gap: "0.5vh"
+        gap: "2vh"
       }}>
         <p className="font-mono" style={{ 
           color: "#8892b0",
-          fontSize: "0.6vw"
+          fontSize: "0.9vw"
         }}>
-          Scroll to explore
+          {t.hero.scroll}
         </p>
         <div
           className="border-2 rounded-full flex items-start justify-center"
