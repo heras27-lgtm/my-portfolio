@@ -30,7 +30,7 @@ export function SkillsSection() {
           </div>
 
           {/* Skills Grid */}
-          <div className="grid md:grid-cols-2" style={{ gap: "5%" }}>
+          <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: "5% 5%" }}>
             {t.skills.categories.map((category, index) => (
               <div
                 key={index}
@@ -43,7 +43,7 @@ export function SkillsSection() {
               >
                 <h3 className="font-bold" style={{ 
                   color: "#64ffda",
-                  fontSize: "1.2vw",
+                  fontSize: "clamp(1rem, 1.2vw, 1.5rem)",
                   marginBottom: "2%"
                 }}>
                   {category.category}
@@ -52,7 +52,7 @@ export function SkillsSection() {
                   {category.skills.map((skill) => (
                     <li key={skill} className="flex items-center" style={{ 
                       color: "#a8b2d1",
-                      fontSize: "1vw",
+                      fontSize: "clamp(0.875rem, 1vw, 1.1rem)",
                       gap: "1%"
                     }}>
                       <span style={{ color: "#64ffda" }}>✓</span>
