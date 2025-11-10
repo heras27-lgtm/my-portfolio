@@ -17,10 +17,17 @@ export function ContactSection() {
     <section id="contact" style={{ overflow: "hidden" }}>
       <Reveal>
       <main style={{ 
-        padding: "3% 5% 5%",
+        padding: "5% 5% 5%",
         width: "90%",
         margin: "0 auto"
       }}>
+        <style>{`
+          @media (max-width: 640px) {
+            #contact {
+              margin-bottom: 7vh !important;
+            }
+          }
+        `}</style>
         <div style={{ 
           display: "flex", 
           flexDirection: "column", 

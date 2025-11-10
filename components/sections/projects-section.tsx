@@ -15,12 +15,19 @@ export function ProjectsSection() {
         width: "90%",
         margin: "0 auto"
       }}>
+        <style>{`
+          @media (max-width: 640px) {
+            #projects {
+              margin-bottom: 7vh !important;
+            }
+          }
+        `}</style>
         <div style={{ display: "flex", flexDirection: "column", gap: "2vh"}}>
           {/* Section Title */}
           <div className="flex items-center" style={{ gap: "2%" }}>
             <h2 className="font-bold" style={{ 
               color: "#ccd6f6",
-              fontSize: "3vw"
+              fontSize: "clamp(1.5rem, 3vw, 2.5rem)"
             }}>
               <span style={{ color: "#64ffda" }}>03.</span> {t.projects.title}
             </h2>
@@ -42,7 +49,7 @@ export function ProjectsSection() {
               }}>
                 <h3 className="font-bold" style={{ 
                   color: "#ccd6f6",
-                  fontSize: "2vw",
+                  fontSize: "clamp(1.3rem, 2vw, 2rem)",
                   marginBottom: "1%"
                 }}>
                   {project.title}
@@ -50,7 +57,7 @@ export function ProjectsSection() {
 
                 <p style={{ 
                   color: "#a8b2d1",
-                  fontSize: "1vw",
+                  fontSize: "clamp(0.9rem, 1vw, 1.1rem)",
                   lineHeight: "1.6",
                   marginBottom: "2%"
                 }}>
@@ -58,22 +65,23 @@ export function ProjectsSection() {
                 </p>
 
                 <div className="flex flex-wrap" style={{ gap: "1%", marginBottom: "2%" }}>
-                  {project.tech.map((t) => (
-                    <span
-                      key={t}
-                      className="rounded"
-                      style={{
-                        backgroundColor: "rgba(100, 255, 218, 0.1)",
-                        color: "#64ffda",
-                        borderColor: "rgba(100, 255, 218, 0.2)",
-                        border: "1px solid",
-                        fontSize: "0.8vw",
-                        padding: "0.5% 1.5%"
-                      }}
-                    >
-                      {t}
-                    </span>
-                  ))}
+                    {project.tech.map((t) => (
+                      <span
+                        key={t}
+                        className="rounded"
+                        style={{
+                          backgroundColor: "rgba(100, 255, 218, 0.1)",
+                          color: "#64ffda",
+                          borderColor: "rgba(100, 255, 218, 0.2)",
+                          border: "1px solid",
+                          fontSize: "clamp(0.7rem, 0.8vw, 0.95rem)",
+                          padding: "0.5% 1.5%",
+                          marginBottom: "0.7em"
+                        }}
+                      >
+                        {t}
+                      </span>
+                    ))}
                 </div>
 
                 <Link
@@ -81,7 +89,7 @@ export function ProjectsSection() {
                   className="inline-flex items-center font-mono transition-all hover:gap-3"
                   style={{ 
                     color: "#64ffda",
-                    fontSize: "0.9vw",
+                    fontSize: "clamp(0.8rem, 0.9vw, 1rem)",
                     gap: "1%",
                     whiteSpace: "nowrap"
                   }}

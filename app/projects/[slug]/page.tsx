@@ -21,12 +21,17 @@ type ProjectSlug =
 // Static metadata for projects (tech, links, images, year, role)
 const projectsMetadata: Record<ProjectSlug, { tech: string[], link: string, github: string, image: string, year: string, role: string }> = {
   "bpce-solutions-informatiques": { tech: ["Python", "Multimodal LLMs", "Azure OpenAI", "BLIP-2", "APIs", "LLM"], link: "#", github: "https://github.com/eleejahroudier/BPCEproject", image: "/BPCESI.jpeg", year: "2025", role: "AI Engineer" },
-  "kerdos-energy-chatbot": { tech: ["Python", "Hugging Face", "APIs", "Weaviate", "Docker", "Docling"], link: "#", github: "#", image: "/kerdos.png", year: "2025", role: "AI Engineer" },
-  "alstom-metro-operations": { tech: ["Python", "Dijkstra's Algorithm", "Graph Neural Networks", "Simulation", "Data Visualization", "Company needs understanding"], link: "#", github: "#", image: "/Alstom.png", year: "2024", role: "AI Engineer" },
+  "kerdos-energy-chatbot": { tech: ["Python", "Hugging Face", "APIs", "Weaviate", "Docker", "Docling"], link: "#", github: "https://github.com/BOupdown/Kerdos", image: "/kerdos.png", year: "2025", role: "AI Engineer" },
+  "alstom-metro-operations": { tech: ["Python", "Dijkstra's Algorithm", "Graph Neural Networks", "Simulation", "Data Visualization", "Company needs understanding"], link: "#", github: "https://github.com/marcodamecourt/data_chall_alstom", image: "/Alstom.png", year: "2024", role: "AI Engineer" },
   "section-paloise": { tech: ["Python", "Data Analysis", "Data Visualization", "Matplotlib", "Seaborn", "Pandas", "NumPy"], link: "#", github: "#", image: "/section.png", year: "2024", role: "Data Analyst" },
   "clermont-foot-63": { tech: ["Python", "Data Cleaning", "Data Visualization", "Matplotlib", "Pandas", "NumPy"], link: "#", github: "#", image: "/clermontfoot.png", year: "2024", role: "Data Analyst" },
   "hays-manchester-city": { tech: ["Data Analysis", "Needs understanding", "Dashboards", "Data Visualization"], link: "https://www.youtube.com/watch?v=xkA2I64WxG0", github: "#", image: "/hays.jpeg", year: "2023", role: "Data Analyst" },
   "bk-biet-project": { tech: ["Python", "TensorFlow", "Keras", "Medical Imaging", "CNNs", "PyTorch", "NumPy", "Pandas", "Scikit-learn"], link: "#", github: "#", image: "/BKbiet.jpeg", year: "2024", role: "Research AI Engineer" },
+  // "plane-gps-tracker": { tech: ["Python"], link: "#", github: "#", image: "", year: "2024", role: "Data Engineer" },
+  // "hyperparameter-optimization": { tech: ["Python"], link: "#", github: "#", image: "", year: "2025", role: "AI Engineer" },
+  // "big-data-pipeline": { tech: ["Python"], link: "#", github: "#", image: "", year: "2025", role: "Data Engineer" },
+  // "law-chatbot": { tech: ["Python"], link: "#", github: "#", image: "", year: "2025", role: "AI Engineer" },
+
 }
 
 export default function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -42,12 +47,28 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
   }
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: "#0f1419" }}>
-      <Header />
+    <>
+      <style>{`
+        .project-container {
+          padding-top: 8%;
+        }
+        @media (max-width: 640px) {
+          .project-container {
+            padding-top: 8% !important;
+          }
+        }
+        @media (min-width: 641px) {
+          .project-container {
+            padding-top: 0 !important;
+          }
+        }
+      `}</style>
+      <div className="min-h-screen project-container" style={{ backgroundColor: "#0f1419" }}>
+        <Header />
       
       {/* Project Hero */}
       <section style={{ 
-        padding: "7% 5% 6%",
+        padding: "clamp(4%, 7%, 10%) clamp(3%, 5%, 8%) clamp(4%, 6%, 10%)",
         width: "90%",
         margin: "0 auto"
       }}>
@@ -58,7 +79,7 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
             className="inline-flex items-center font-mono transition-all hover:gap-3"
             style={{ 
               color: "#64ffda",
-              fontSize: "0.9vw",
+              fontSize: "clamp(0.75rem, 0.9vw, 1rem)",
               gap: "1%",
               marginBottom: "2%"
             }}
@@ -70,7 +91,7 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
           {/* Title */}
           <h1 className="font-bold" style={{ 
             color: "#ccd6f6",
-            fontSize: "4vw",
+            fontSize: "clamp(1.75rem, 4vw, 3.5rem)",
             marginBottom: "1%"
           }}>
             {projectContent.title}
@@ -79,12 +100,12 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
           {/* Meta Info */}
           <div className="flex flex-wrap" style={{ gap: "3%", marginBottom: "2%" }}>
             <div>
-              <span className="font-mono" style={{ color: "#8892b0", fontSize: "0.9vw" }}>
+              <span className="font-mono" style={{ color: "#8892b0", fontSize: "clamp(0.75rem, 0.9vw, 1rem)" }}>
                 {t.projectPage.year}: <span style={{ color: "#64ffda" }}>{projectMeta.year}</span>
               </span>
             </div>
             <div>
-              <span className="font-mono" style={{ color: "#8892b0", fontSize: "0.9vw" }}>
+              <span className="font-mono" style={{ color: "#8892b0", fontSize: "clamp(0.75rem, 0.9vw, 1rem)" }}>
                 {t.projectPage.role}: <span style={{ color: "#64ffda" }}>{projectMeta.role}</span>
               </span>
             </div>
@@ -101,7 +122,7 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
                   color: "#64ffda",
                   borderColor: "rgba(100, 255, 218, 0.2)",
                   border: "1px solid",
-                  fontSize: "0.8vw",
+                  fontSize: "clamp(0.7rem, 0.8vw, 0.95rem)",
                   padding: "0.5% 1.5%"
                 }}
               >
@@ -116,11 +137,11 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
             style={{
               borderColor: "rgba(100, 255, 218, 0.2)",
               width: "100%",
-              height: "40vh",
+              height: "clamp(20vh, 40vh, 50vh)",
               position: "relative",
               marginBottom: "4%",
               backgroundColor: "white",
-              padding: "3% 20%"
+              padding: "clamp(2%, 3%, 5%) clamp(10%, 20%, 30%)"
             }}
           >
             <Image
@@ -135,14 +156,14 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
           <div style={{ display: "flex", flexDirection: "column", gap: "2vh" }}>
             <h2 className="font-bold" style={{ 
               color: "#ccd6f6",
-              fontSize: "2vw"
+              fontSize: "clamp(1.3rem, 2vw, 2rem)"
             }}>
               {t.projectPage.overview}
             </h2>
             <div
               style={{ 
                 color: "#a8b2d1",
-                fontSize: "1vw",
+                fontSize: "clamp(0.9rem, 1vw, 1.1rem)",
                 lineHeight: "1.8",
                 whiteSpace: "pre-line"
               }}
@@ -160,7 +181,7 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
                 className="inline-flex items-center font-mono transition-all hover:gap-3 rounded border hover:shadow-[0_0_20px_rgba(100,255,218,0.4)]"
                 style={{ 
                   color: "#64ffda",
-                  fontSize: "0.9vw",
+                  fontSize: "clamp(0.8rem, 0.9vw, 1rem)",
                   gap: "1%",
                   padding: "1% 3%",
                   borderColor: "#64ffda",
@@ -179,7 +200,7 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
                 className="inline-flex items-center font-mono transition-all hover:gap-3 rounded border hover:shadow-[0_0_20px_rgba(100,255,218,0.4)]"
                 style={{ 
                   color: "#64ffda",
-                  fontSize: "0.9vw",
+                  fontSize: "clamp(0.8rem, 0.9vw, 1rem)",
                   gap: "1%",
                   padding: "1% 3%",
                   borderColor: "rgba(100, 255, 218, 0.3)",
@@ -195,5 +216,6 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
         </div>
       </section>
     </div>
+    </>
   )
 }

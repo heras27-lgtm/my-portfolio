@@ -18,13 +18,15 @@ export function Header() {
 
   return (
     <header
-      className="fixed w-full top-0 z-50 border-b mb-0 md:mb-0 sm:mb-12"
+      className="fixed w-full top-0 z-50 border-b mb-0"
       style={{
         backgroundColor: "#0f1419",
         borderColor: "rgba(100, 255, 218, 0.1)",
-        height: "8%"
+        height: "8%",
+        marginBottom: "0",
       }}
     >
+      {/* Supprimer le margin-bottom sur mobile pour éviter la bande blanche */}
   <nav className="w-90% mx-auto h-full flex items-center justify-between" style={{ padding: "0 5%" }}>
         {/* Logo */}
         <Link href="/">
@@ -33,8 +35,8 @@ export function Header() {
             style={{ 
               borderColor: "#64ffda", 
               color: "#64ffda",
-              width: "3vw",
-              fontSize: "1vw"
+              width: "clamp(2.5rem, 3vw, 3.5rem)",
+              fontSize: "clamp(0.8rem, 1vw, 1.2rem)"
             }}
           >
             AHE
@@ -48,7 +50,7 @@ export function Header() {
               key={item.href}
               style={{
                 minWidth: "10vw",
-                padding: "0.5vw 1vw",
+                padding: "clamp(0.3rem, 0.5vw, 0.8rem) clamp(0.5rem, 1vw, 1.5rem)",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center"
@@ -59,7 +61,7 @@ export function Header() {
                 className="font-mono hover:opacity-80 transition-opacity"
                 style={{ 
                   color: "#a8b2d1",
-                  fontSize: "1vw",
+                  fontSize: "clamp(0.8rem, 1vw, 1.1rem)",
                   whiteSpace: "nowrap"
                 }}
               >
@@ -70,14 +72,14 @@ export function Header() {
           ))}
           
           {/* Language Selector */}
-          <div className="flex gap-1 ml-4" style={{ borderLeft: "1px solid rgba(100, 255, 218, 0.1)", paddingLeft: "1.5vw" }}>
+          <div className="flex gap-1 ml-4" style={{ borderLeft: "1px solid rgba(100, 255, 218, 0.1)", paddingLeft: "clamp(0.8rem, 1.5vw, 2rem)" }}>
             <button
               onClick={() => setLanguage("en")}
               className="font-mono px-2 py-1 rounded transition-all cursor-pointer"
               style={{
                 color: language === "en" ? "#64ffda" : "#a8b2d1",
                 backgroundColor: language === "en" ? "rgba(100, 255, 218, 0.1)" : "transparent",
-                fontSize: "0.9vw",
+                fontSize: "clamp(0.75rem, 0.9vw, 1rem)",
                 border: language === "en" ? "1px solid rgba(100, 255, 218, 0.3)" : "1px solid transparent",
                 cursor: "pointer"
               }}
@@ -90,7 +92,7 @@ export function Header() {
               style={{
                 color: language === "fr" ? "#64ffda" : "#a8b2d1",
                 backgroundColor: language === "fr" ? "rgba(100, 255, 218, 0.1)" : "transparent",
-                fontSize: "0.9vw",
+                fontSize: "clamp(0.75rem, 0.9vw, 1rem)",
                 border: language === "fr" ? "1px solid rgba(100, 255, 218, 0.3)" : "1px solid transparent",
                 cursor: "pointer"
               }}

@@ -16,12 +16,19 @@ export function AboutSection() {
         width: "90%",
         margin: "0 auto"
       }}>
+        <style>{`
+          @media (max-width: 640px) {
+            #about {
+              margin-bottom: 7vh !important;
+            }
+          }
+        `}</style>
         <div style={{ display: "flex", flexDirection: "column", gap: "2vh" }}>
           {/* Section Title */}
           <div className="flex items-center" style={{ gap: "2%" }}>
             <h2 className="font-bold" style={{ 
               color: "#ccd6f6",
-              fontSize: "3vw"
+              fontSize: "clamp(1.5rem, 3vw, 2.5rem)"
             }}>
               <span style={{ color: "#64ffda" }}>01.</span> {t.about.title}
             </h2>
@@ -36,7 +43,7 @@ export function AboutSection() {
             <div className="md:col-span-2" style={{ display: "flex", flexDirection: "column", gap: "1.5vh" }}>
               <p style={{ 
                 color: "#a8b2d1",
-                fontSize: "1vw",
+                fontSize: "clamp(0.9rem, 1vw, 1.1rem)",
                 lineHeight: "1.6",
                 textAlign: "justify"
               }}>
@@ -45,7 +52,7 @@ export function AboutSection() {
 
               <p style={{ 
                 color: "#a8b2d1",
-                fontSize: "1vw",
+                fontSize: "clamp(0.9rem, 1vw, 1.1rem)",
                 lineHeight: "1.6",
                 textAlign: "justify"
               }}>
@@ -55,7 +62,7 @@ export function AboutSection() {
 
               <p style={{ 
                 color: "#a8b2d1",
-                fontSize: "1vw",
+                fontSize: "clamp(0.9rem, 1vw, 1.1rem)",
                 lineHeight: "1.6",
                 textAlign: "justify"
               }}>
@@ -64,7 +71,7 @@ export function AboutSection() {
 
               <p style={{ 
                 color: "#a8b2d1",
-                fontSize: "1vw",
+                fontSize: "clamp(0.9rem, 1vw, 1.1rem)",
                 lineHeight: "1.6",
                 textAlign: "justify"
               }}>
@@ -73,7 +80,7 @@ export function AboutSection() {
 
                <p style={{ 
                 color: "#a8b2d1",
-                fontSize: "1vw",
+                fontSize: "clamp(0.9rem, 1vw, 1.1rem)",
                 lineHeight: "1.6",
                 textAlign: "justify"
               }}>
@@ -82,7 +89,7 @@ export function AboutSection() {
 
               <p style={{ 
                 color: "#a8b2d1",
-                fontSize: "1vw",
+                fontSize: "clamp(0.9rem, 1vw, 1.1rem)",
                 lineHeight: "1.6",
                 textAlign: "justify"
               }}>
@@ -92,8 +99,8 @@ export function AboutSection() {
               <div className="grid grid-cols-2" style={{ gap: "2%", paddingTop: "2%" }}>
                 {['Python','SQL','C', 'Jira', 'AWS', 'GitHub'].map((tech) => (
                   <div key={tech} className="flex items-center" style={{ gap: "1%" }}>
-                    <span style={{ color: "#64ffda", fontSize: "1vw" }}>▸</span>
-                    <span style={{ color: "#ccd6f6", fontSize: "1vw" }}>{tech}</span>
+                    <span style={{ color: "#64ffda", fontSize: "clamp(0.9rem, 1vw, 1.1rem)" }}>▸</span>
+                    <span style={{ color: "#ccd6f6", fontSize: "clamp(0.9rem, 1vw, 1.1rem)" }}>{tech}</span>
                   </div>
                 ))}
               </div>
@@ -101,7 +108,7 @@ export function AboutSection() {
               <p style={{ 
                   color: "#a8b2d1",
                   paddingTop: "2%",
-                  fontSize: "1vw",
+                  fontSize: "clamp(0.9rem, 1vw, 1.1rem)",
                   lineHeight: "1.6",
                   textAlign: "justify"
                 }}>

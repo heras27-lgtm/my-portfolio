@@ -7,19 +7,26 @@ export function SkillsSection() {
   const { t } = useLanguage()
 
   return (
-    <section id="skills" style={{ overflow: "hidden" }}>
-      <Reveal>
+    <section id="skills" style={{ overflowX: "hidden", overflowY: "visible" }}>
+      <Reveal translateY="2vh" threshold={0.1}>
       <main style={{ 
-        padding: "3% 5% 8%",
+        padding: "3% 5% clamp(12vh, 12%, 18vh)",
         width: "90%",
         margin: "0 auto"
       }}>
+        <style>{`
+          @media (max-width: 640px) {
+            #skills {
+              margin-bottom: 7vh !important;
+            }
+          }
+        `}</style>
         <div style={{ display: "flex", flexDirection: "column", gap: "2vh" }}>
           {/* Section Title */}
           <div className="flex items-center" style={{ gap: "2%" }}>
             <h2 className="font-bold" style={{ 
               color: "#ccd6f6",
-              fontSize: "3vw"
+              fontSize: "clamp(1.5rem, 3vw, 2.5rem)"
             }}>
               <span style={{ color: "#64ffda" }}>04.</span> {t.skills.title}
             </h2>
@@ -30,7 +37,7 @@ export function SkillsSection() {
           </div>
 
           {/* Skills Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: "5% 5%" }}>
+          <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: "clamp(3vh, 5%, 5vh) clamp(3vh, 5%, 5vh)" }}>
             {t.skills.categories.map((category, index) => (
               <div
                 key={index}
@@ -38,7 +45,8 @@ export function SkillsSection() {
                 style={{ 
                   borderColor: "rgba(100, 255, 218, 0.2)", 
                   backgroundColor: "rgba(100, 255, 218, 0.02)",
-                  padding: "3%"
+                  padding: "clamp(2%, 3%, 4%)",
+                  minHeight: "0"
                 }}
               >
                 <h3 className="font-bold" style={{ 

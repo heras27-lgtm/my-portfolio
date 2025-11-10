@@ -11,18 +11,35 @@ import { ContactSection } from "@/components/sections/contact-section"
 
 export default function Home() {
   return (
-    <div className="min-h-screen" style={{ 
-      backgroundColor: "#0f1419",
-      paddingBottom: "2vh"
-    }}>
-      <Header />
-      <Toaster position="bottom-center" richColors />
-      <Hero />
+    <>
+      <style>{`
+        .main-container {
+          padding-top: 8%;
+        }
+        @media (max-width: 640px) {
+          .main-container {
+            padding-top: 8% !important;
+          }
+        }
+        @media (min-width: 641px) {
+          .main-container {
+            padding-top: 0 !important;
+          }
+        }
+      `}</style>
+      <div className="min-h-screen main-container" style={{ 
+        backgroundColor: "#0f1419",
+        paddingBottom: "2vh"
+      }}>
+        <Header />
+        <Toaster position="bottom-center" richColors />
+        <Hero />
       <AboutSection />
       <ExperienceSection />
       <ProjectsSection />
       <SkillsSection />
       <ContactSection />
     </div>
+    </>
   )
 }

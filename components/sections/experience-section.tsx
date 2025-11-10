@@ -7,19 +7,26 @@ export function ExperienceSection() {
   const { t } = useLanguage()
 
   return (
-    <section id="experience" style={{ overflow: "hidden" }}>
-      <Reveal translateY="2vh">
+    <section id="experience" style={{ overflowX: "hidden", overflowY: "visible" }}>
+      <Reveal translateY="2vh" threshold={0.1}>
       <main style={{ 
-        padding: "3% 5% 5%",
+        padding: "3% 5% clamp(8%, 10%, 15%)",
         width: "90%",
         margin: "0 auto"
       }}>
+        <style>{`
+          @media (max-width: 640px) {
+            #experience {
+              margin-bottom: 7vh !important;
+            }
+          }
+        `}</style>
         <div style={{ display: "flex", flexDirection: "column", gap: "2vh" }}>
           {/* Section Title */}
           <div className="flex items-center" style={{ gap: "2%" }}>
             <h2 className="font-bold" style={{ 
               color: "#ccd6f6",
-              fontSize: "3vw"
+              fontSize: "clamp(1.5rem, 3vw, 2.5rem)"
             }}>
               <span style={{ color: "#64ffda" }}>02.</span> {t.experience.title}
             </h2>
@@ -30,7 +37,7 @@ export function ExperienceSection() {
           </div>
 
           {/* Experience Timeline */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "5vh", textAlign: "justify" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "clamp(4vh, 6%, 6vh)", textAlign: "justify" }}>
             {t.experience.jobs.map((job, idx) => {
               const companyUrls = [
                 "https://www.airbus.com/",
@@ -56,18 +63,18 @@ export function ExperienceSection() {
                   }}
                 >
                   <div style={{ display: "flex", alignItems: "baseline", gap: "2%", marginBottom: "1%" }}>
-                    <h3 className="font-bold group-hover:text-[#64ffda] transition-colors duration-700 ease-out" style={{ color: "#ccd6f6", fontSize: "1.6vw" }}>
+                    <h3 className="font-bold group-hover:text-[#64ffda] transition-colors duration-700 ease-out" style={{ color: "#ccd6f6", fontSize: "clamp(1.2rem, 1.6vw, 1.8rem)" }}>
                       {job.role}
                     </h3>
-                    <span className="font-mono group-hover:opacity-100 transition-all duration-700 ease-out group-hover:translate-x-[0.3vw]" style={{ color: "#64ffda", fontSize: "0.9vw", opacity: 0.8 }}>@ {job.company}</span>
+                    <span className="font-mono group-hover:opacity-100 transition-all duration-700 ease-out group-hover:translate-x-[0.3vw]" style={{ color: "#64ffda", fontSize: "clamp(0.8rem, 0.9vw, 1rem)", opacity: 0.8 }}>@ {job.company}</span>
                   </div>
-                  <p className="font-mono" style={{ color: "#8892b0", fontSize: "0.9vw", marginBottom: "1.5%" }}>
+                  <p className="font-mono" style={{ color: "#8892b0", fontSize: "clamp(0.8rem, 0.9vw, 1rem)", marginBottom: "1.5%" }}>
                     {job.period}
                   </p>
 
                   <ul style={{ display: "flex", flexDirection: "column", gap: "1vh", marginBottom: "2%" }}>
                     {job.points.map((pt) => (
-                      <li key={pt} className="flex" style={{ gap: "1%", color: "#a8b2d1", fontSize: "1vw", lineHeight: 1.6 }}>
+                      <li key={pt} className="flex" style={{ gap: "1%", color: "#a8b2d1", fontSize: "clamp(0.9rem, 1vw, 1.1rem)", lineHeight: 1.6 }}>
                         <span style={{ color: "#64ffda" }}>▸</span>
                         <span>{pt}</span>
                       </li>
@@ -84,7 +91,7 @@ export function ExperienceSection() {
                           color: "#64ffda",
                           borderColor: "rgba(100, 255, 218, 0.2)",
                           border: "1px solid",
-                          fontSize: "0.8vw",
+                          fontSize: "clamp(0.7rem, 0.8vw, 0.95rem)",
                           padding: "0.5% 1.5%"
                         }}
                       >
