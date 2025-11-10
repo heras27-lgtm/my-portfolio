@@ -11,7 +11,10 @@ import { ContactSection } from "@/components/sections/contact-section"
 
 export default function Home() {
   return (
-    <div className="min-h-screen" style={{ backgroundColor: "#0f1419" }}>
+    <div className="min-h-screen" style={{ 
+      backgroundColor: "#0f1419",
+      paddingBottom: "2vh"
+    }}>
       <Header />
       <Toaster position="bottom-center" richColors />
       <Hero />

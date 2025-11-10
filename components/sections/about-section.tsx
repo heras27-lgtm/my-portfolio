@@ -9,10 +9,10 @@ export function AboutSection() {
   const PROFILE_IMAGE = "/IMG_2889.jpg"
 
   return (
-    <section id="about">
+    <section id="about" style={{ overflow: "hidden" }}>
       <Reveal>
       <main style={{ 
-        padding: "6% 5% 3%",
+        padding: "5% 5% 5%",
         width: "90%",
         margin: "0 auto"
       }}>

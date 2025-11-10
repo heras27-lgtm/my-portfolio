@@ -8,10 +8,10 @@ export function ProjectsSection() {
   const { t } = useLanguage()
 
   return (
-    <section id="projects">
+    <section id="projects" style={{ overflow: "hidden" }}>
       <Reveal translateY="1vh" threshold={0.1}>
       <main style={{ 
-        padding: "6% 5% 3%",
+        padding: "3% 5% 5%",
         width: "90%",
         margin: "0 auto"
       }}>

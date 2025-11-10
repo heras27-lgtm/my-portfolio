@@ -14,10 +14,10 @@ export function ContactSection() {
   const PHONE = "+33 7 81 68 29 72";
 
   return (
-    <section id="contact">
+    <section id="contact" style={{ overflow: "hidden" }}>
       <Reveal>
       <main style={{ 
-        padding: "6% 5% 3%",
+        padding: "3% 5% 5%",
         width: "90%",
         margin: "0 auto"
       }}>
@@ -31,7 +31,7 @@ export function ContactSection() {
           <div className="flex items-center" style={{ gap: "2%" }}>
             <h2 className="font-bold" style={{ 
               color: "#ccd6f6",
-              fontSize: "3vw"
+              fontSize: "clamp(1.5rem, 3vw, 2.5rem)"
             }}>
               <span style={{ color: "#64ffda" }}>05.</span> {t.contact.title}
             </h2>
@@ -45,7 +45,7 @@ export function ContactSection() {
           <div style={{ display: "flex", flexDirection: "column", gap: "1.5vh" }}>
             <p style={{ 
               color: "#a8b2d1",
-              fontSize: "1vw",
+              fontSize: "clamp(0.875rem, 1vw, 1.1rem)",
               lineHeight: "1.6"
             }}>
               {t.contact.message}
@@ -54,7 +54,7 @@ export function ContactSection() {
 
             {/* Social / Contact Icons */}
             <div style={{ marginTop: "3%" }}>
-              <div className="flex" style={{ gap: "1.2%", justifyContent: "center", alignItems: "center" }}>
+              <div className="flex" style={{ gap: "clamp(0.5rem, 1.2%, 1.2rem)", justifyContent: "center", alignItems: "center", flexWrap: "wrap" }}>
                 {/* LinkedIn */}
                 <a
                   href={LINKEDIN_URL}
@@ -65,15 +65,15 @@ export function ContactSection() {
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    width: "3vw",
-                    height: "3vw",
+                    width: "clamp(2.5rem, 3vw, 3.5rem)",
+                    height: "clamp(2.5rem, 3vw, 3.5rem)",
                     border: "1px solid rgba(100,255,218,0.3)",
                     borderRadius: "0.6vw",
                     color: "#64ffda"
                   }}
                   className="hover:opacity-80 transition-opacity"
                 >
-                  <Linkedin size={"1.4vw"} />
+                  <Linkedin size={"clamp(1rem, 1.4vw, 1.5rem)"} />
                 </a>
                 {/* Instagram */}
                 <a
@@ -85,15 +85,15 @@ export function ContactSection() {
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    width: "3vw",
-                    height: "3vw",
+                    width: "clamp(2.5rem, 3vw, 3.5rem)",
+                    height: "clamp(2.5rem, 3vw, 3.5rem)",
                     border: "1px solid rgba(100,255,218,0.3)",
                     borderRadius: "0.6vw",
                     color: "#64ffda"
                   }}
                   className="hover:opacity-80 transition-opacity"
                 >
-                  <Instagram size={"1.4vw"} />
+                  <Instagram size={"clamp(1rem, 1.4vw, 1.5rem)"} />
                 </a>
                 {/* Email (copy) */}
                 <button
@@ -108,8 +108,8 @@ export function ContactSection() {
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    width: "3vw",
-                    height: "3vw",
+                    width: "clamp(2.5rem, 3vw, 3.5rem)",
+                    height: "clamp(2.5rem, 3vw, 3.5rem)",
                     border: "1px solid rgba(100,255,218,0.3)",
                     borderRadius: "0.6vw",
                     color: "#64ffda",
@@ -118,7 +118,7 @@ export function ContactSection() {
                   }}
                   className="hover:opacity-80 transition-opacity font-mono"
                 >
-                  <Mail size={"1.4vw"} />
+                  <Mail size={"clamp(1rem, 1.4vw, 1.5rem)"} />
                 </button>
                 {/* Phone (copy) */}
                 <button
@@ -133,8 +133,8 @@ export function ContactSection() {
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    width: "3vw",
-                    height: "3vw",
+                    width: "clamp(2.5rem, 3vw, 3.5rem)",
+                    height: "clamp(2.5rem, 3vw, 3.5rem)",
                     border: "1px solid rgba(100,255,218,0.3)",
                     borderRadius: "0.6vw",
                     color: "#64ffda",
@@ -143,7 +143,7 @@ export function ContactSection() {
                   }}
                   className="hover:opacity-80 transition-opacity font-mono"
                 >
-                  <Phone size={"1.4vw"} />
+                  <Phone size={"clamp(1rem, 1.4vw, 1.5rem)"} />
                 </button>
               </div>
             </div>

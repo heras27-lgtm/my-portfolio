@@ -7,10 +7,10 @@ export function ExperienceSection() {
   const { t } = useLanguage()
 
   return (
-    <section id="experience">
+    <section id="experience" style={{ overflow: "hidden" }}>
       <Reveal translateY="2vh">
       <main style={{ 
-        padding: "10% 5% 3%",
+        padding: "3% 5% 5%",
         width: "90%",
         margin: "0 auto"
       }}>

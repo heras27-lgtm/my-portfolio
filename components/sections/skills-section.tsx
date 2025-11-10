@@ -7,10 +7,10 @@ export function SkillsSection() {
   const { t } = useLanguage()
 
   return (
-    <section id="skills">
+    <section id="skills" style={{ overflow: "hidden" }}>
       <Reveal>
       <main style={{ 
-        padding: "6% 5% 3%",
+        padding: "3% 5% 8%",
         width: "90%",
         margin: "0 auto"
       }}>

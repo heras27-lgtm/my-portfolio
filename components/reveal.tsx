@@ -67,7 +67,8 @@ export const Reveal: React.FC<RevealProps> = ({
         transition: "opacity 1s ease-out, transform 1s cubic-bezier(0.22, 1, 0.36, 1)",
         opacity: visible ? 1 : 0,
         transform: visible ? "translateY(0)" : `translateY(${translateY})`,
-        willChange: "opacity, transform",
+        willChange: visible ? "auto" : "opacity, transform",
+        pointerEvents: visible ? "auto" : "none",
       }}
       aria-hidden={!visible && !hasShown}
     >
