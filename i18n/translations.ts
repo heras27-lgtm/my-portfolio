@@ -186,7 +186,7 @@ export const translations = {
       greeting: "Bonjour, je m'appelle",
       tagline: "Guidé par la curiosité, alimenté par la data.",
       description: "Passionné par les données et l'IA, je recherche des opportunités en tant que",
-      role: "Data Scientist, Analyste de Données ou Ingénieur IA",
+      role: ", Data Analyst, Data Scientist ou Ingénieur IA",
       experience: "J'ai plus d'un an d'expérience entre Data et Intelligence Artificielle.",
       languages: "Je suis trilingue espagnol, français et anglais.",
       cta: "En savoir plus sur moi !",
