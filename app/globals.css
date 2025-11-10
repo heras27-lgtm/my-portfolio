@@ -142,7 +142,13 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Anchor offset ONLY on mobile so titles are visible below fixed header */
+/* Anchor offset so titles are visible below fixed header */
+section[id] { 
+  scroll-margin-top: 3vh; /* Desktop: more space for larger header */
+}
+
 @media (max-width: 640px) {
-  section[id] { scroll-margin-top: 5vh; }
+  section[id] { 
+    scroll-margin-top: 3vh; /* Mobile: less space needed */
+  }
 }
