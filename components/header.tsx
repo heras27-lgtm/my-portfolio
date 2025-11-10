@@ -8,23 +8,22 @@ export function Header() {
 
   return (
     <header
-      className="fixed w-full top-0 z-50 border-b"
+      className="fixed w-full top-0 z-50 border-b mb-0 md:mb-0 sm:mb-12"
       style={{
         backgroundColor: "#0f1419",
         borderColor: "rgba(100, 255, 218, 0.1)",
         height: "8%"
       }}
     >
-      <nav className="w-90% mx-auto h-full flex items-center justify-between" style={{ padding: "0 5%" }}>
+  <nav className="w-90% mx-auto h-full flex items-center justify-between" style={{ padding: "0 5%" }}>
         {/* Logo */}
         <Link href="/">
           <div
-            className="border-2 flex items-center justify-center rounded font-bold cursor-pointer hover:opacity-80 transition-opacity"
+            className="border-2 flex items-center justify-center rounded font-bold cursor-pointer hover:opacity-80 transition-opacity aspect-square"
             style={{ 
               borderColor: "#64ffda", 
               color: "#64ffda",
               width: "3vw",
-              height: "3vw",
               fontSize: "1vw"
             }}
           >
@@ -92,16 +91,6 @@ export function Header() {
                 {item.label.substring(item.label.indexOf(" "))}
               </a>
             ))}
-            <a
-              href="#resume"
-              className="px-4 py-2 border rounded text-sm font-mono w-fit"
-              style={{
-                borderColor: "#64ffda",
-                color: "#64ffda",
-              }}
-            >
-              Resume
-            </a>
           </div>
         </div>
       )}
