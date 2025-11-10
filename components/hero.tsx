@@ -89,7 +89,7 @@ export function Hero() {
 
       {/* Scroll indicator */}
       <div className="flex flex-col items-center scroll-indicator" style={{ 
-        marginTop: "clamp(6%, 8%, 10%)",
+        marginTop: "clamp(3%, 4%, 5%)",
         gap: "2vh"
       }}>
         <style>{`
@@ -125,6 +125,8 @@ export function Hero() {
             .scroll-indicator .scroll-text {
               display: none;
             }
+            /* Keep larger spacing on mobile */
+            .scroll-indicator { margin-top: clamp(6%, 8%, 10%) !important; }
           }
         `}</style>
         

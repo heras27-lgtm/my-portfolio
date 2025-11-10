@@ -13,19 +13,10 @@ export default function Home() {
   return (
     <>
       <style>{`
-        .main-container {
-          padding-top: 8%;
-        }
-        @media (max-width: 640px) {
-          .main-container {
-            padding-top: 8% !important;
-          }
-        }
-        @media (min-width: 641px) {
-          .main-container {
-            padding-top: 0 !important;
-          }
-        }
+        /* Provide consistent top padding so content isn't hidden behind the fixed header */
+        /* Desktop: smaller top padding; Mobile keeps more space below fixed header */
+        .main-container { padding-top: 0vh; }
+        @media (max-width: 640px) { .main-container { padding-top: 12vh; } }
       `}</style>
       <div className="min-h-screen main-container" style={{ 
         backgroundColor: "#0f1419",

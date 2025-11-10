@@ -116,7 +116,13 @@ export function Header() {
         >
           <div className="px-6 py-4 flex flex-col gap-4">
             {navigationItems.map((item) => (
-              <a key={item.href} href={item.href} className="text-sm font-mono" style={{ color: "#a8b2d1" }}>
+              <a
+                key={item.href}
+                href={item.href}
+                className="text-sm font-mono"
+                style={{ color: "#a8b2d1" }}
+                onClick={() => setIsOpen(false)}
+              >
                 <span style={{ color: "#64ffda" }}>{item.label.split(".")[0]}.</span>
                 {item.label.substring(item.label.indexOf(" "))}
               </a>

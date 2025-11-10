@@ -49,19 +49,9 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
   return (
     <>
       <style>{`
-        .project-container {
-          padding-top: 8%;
-        }
-        @media (max-width: 640px) {
-          .project-container {
-            padding-top: 8% !important;
-          }
-        }
-        @media (min-width: 641px) {
-          .project-container {
-            padding-top: 0 !important;
-          }
-        }
+        /* Consistent spacing below fixed header */
+        .project-container { padding-top: 5vh; }
+        @media (max-width: 640px) { .project-container { padding-top: 9.5vh; } }
       `}</style>
       <div className="min-h-screen project-container" style={{ backgroundColor: "#0f1419" }}>
         <Header />
