@@ -185,8 +185,8 @@ export const translations = {
     hero: {
       greeting: "Bonjour, je m'appelle",
       tagline: "Guidé par la curiosité, alimenté par la data.",
-      description: "Passionné par les données et l'IA, je recherche des opportunités en tant que",
-      role: ", Data Analyst, Data Scientist ou Ingénieur IA",
+      description: "Passionné par la Data et l'IA, je recherche des opportunités en tant que",
+      role: "Data Analyst, Data Scientist ou Ingénieur IA",
       experience: "J'ai plus d'un an d'expérience entre Data et Intelligence Artificielle.",
       languages: "Je suis trilingue espagnol, français et anglais.",
       cta: "En savoir plus sur moi !",
@@ -195,14 +195,14 @@ export const translations = {
     // About Section
     about: {
       title: "À propos",
-      intro: "Bonjour ! Je suis Alejandro, un passionné de données et d'IA basé à Pau, en France. Je suis passionné par l'exploitation de la puissance de l'information et la transformation des données en connaissances significatives. Je suis fasciné par la façon dont l'information façonne notre monde et c'est exactement pourquoi j'adore ce domaine.",
-      languages: "Je suis un locuteur natif de l'espagnol et du français et j'ai un niveau C1 en anglais, ce qui me permet de communiquer et de travailler couramment dans des environnements anglophones.",
+      intro: "Bonjour ! Je suis Alejandro, un passionné de Data et d'IA basé à Pau, en France. Je suis motivé par l'exploitation de la puissance de l'information et la transformation de la Data en connaissances significatives. Je suis fasciné par la façon dont l'information peut façonner une prise de décision de différentes manières et c'est exactement pourquoi j'adore ce domaine.",
+      languages: "Je parle couramment l'espagnol et le français et j'ai un niveau C1 en anglais, ce qui me permet de communiquer et de travailler couramment dans des environnements anglophones.",
       motivated: "Je suis fortement motivé par l'innovation, l'apprentissage continu et je suis aussi empathique et profondément curieux.",
-      degree: "Diplômé de CY Tech, je suis titulaire d'un Master en Mathématiques et Informatique Ingénierie, spécialisé en Intelligence Artificielle.",
-      exchange: "J'ai également complété un semestre d'échange de 6 mois en Inde, où j'ai contribué à un projet de recherche en IA et j'ai approfondi mes connaissances en data science.",
+      degree: "Diplômé de CY Tech, je suis titulaire d'un diplôme d'ingénieur en Mathématiques et Informatique, spécialisé en Intelligence Artificielle.",
+      exchange: "J'ai également complété un semestre d'échange de 6 mois en Inde, où j'ai contribué à un projet de recherche en IA et j'ai approfondi mes connaissances en Data Science.",
       experience: "J'ai accumulé plus d'un an d'expérience professionnelle, notamment en tant que Stagiaire Data Engineer chez Groupe Coopératif Vivadour et Stagiaire IA Analyst chez Airbus.",
       technologies: "Voici quelques technologies avec lesquelles j'ai récemment travaillé :",
-      hobbies: "En dehors du travail, j'ai été joueur de handball semi-professionnel pendant 4 ans, j'aime jouer au échecs dans un club et je suis un lecteur passionné de livres en sociologie et psychologie.",
+      hobbies: "En dehors du travail, j'ai été joueur de handball semi-professionnel pendant 4 ans, je suis joueur d'échecs en club et je suis un lecteur passionné de livres en sociologie et psychologie.",
     },
     // Experience Section
     experience: {
@@ -214,11 +214,11 @@ export const translations = {
           period: "Mars 2025 — Septembre 2025",
           tech: ["Méthode AGILE", "AWS", "RAG", "Analyse des besoins", "GCP", "Tableaux de bord", "Tarification des produits", "Analyse de produits IA", "Rédaction de documents"],
           points: [
-            "Menée des analyses stratégiques de solutions d'IA pour identifier les opportunités à fort impact alignées aux objectifs commerciaux et aux contraintes opérationnelles.",
-            "Amélioré le support opérationnel pour plus de 1 000 employés en menant des évaluations technologiques IA complètes en collaboration avec les professionnels de Google et ServiceNow. Ces évaluations impliquaient l'étude de l'architecture de différentes solutions, l'analyse de leurs coûts récurrents, non récurrents, les délais requis, et l'évaluation de la valeur qu'elles pourraient apporter à l'entreprise. Au-delà de l'évaluation, j'ai approfondi mes connaissances en recherchant comment les solutions d'IA sont valorisées dans les industries et en examinant les articles de recherche de pointe.",
+            "Mené des analyses stratégiques de solutions d'IA pour identifier les opportunités à fort impact alignées aux objectifs commerciaux et aux contraintes opérationnelles.",
+            "Amélioré le support opérationnel pour plus de 1 000 employés en menant des évaluations technologiques IA complètes en collaboration avec des professionnels Google et ServiceNow. Ces évaluations impliquaient l'étude de l'architecture de différentes solutions, l'analyse de leurs coûts récurrents, non récurrents, les délais requis, et l'évaluation de la valeur qu'elles pourraient apporter à l'entreprise. Au-delà de l'évaluation, j'ai approfondi mes connaissances en recherchant comment les solutions d'IA sont valorisées dans les industries et en examinant les articles de recherche de pointe.",
             "Influencé une décision d'investissement de 100k€+ en fournissant des analyses exploitables sur la faisabilité, le coût et la valeur commerciale des solutions d'IA.",
             "Comblé le fossé entre les besoins commerciaux et techniques en fournissant des fonctionnalités d'IA évolutives et axées sur la valeur adaptées aux cas d'usage d'entreprise, impactant directement une initiative de transformation numérique en cours de 4M€+.",
-            "Contribué au développement d'un assistant IA interne (chatbot) basé sur la génération augmentée par récupération (RAG), exploitant la documentation propriétaire d'Airbus avec AWS S3, Lambda, Unstructured.io et OpenSearch."
+            "Contribué au développement d'un assistant IA interne (chatbot) basé sur le RAG, exploitant la documentation Airbus avec AWS S3, Lambda, Unstructured.io et OpenSearch."
           ]
         },
         {
@@ -227,20 +227,20 @@ export const translations = {
           period: "Mars 2023 — Septembre 2023",
           tech: ["SQL Server", "ETL", "T-SQL", "Pipeline de données", "Optimisation de base de données", "Power BI", "Nettoyage de données", "Excel"],
           points: [
-            "Architécté et développé une base de données SQL Server robuste pour faciliter la migration vers un nouveau système ERP, assurant l'intégrité, l'extensibilité et les performances optimales des données.",
+            "Développé une base de données SQL Server robuste pour faciliter la migration vers un nouveau système ERP, assurant l'intégrité, l'extensibilité et les performances optimales des données.",
             "Ingénierie d'un pipeline ETL complet pour collecter, traiter et transformer efficacement les données brutes du système hérité, permettant une intégration ERP transparente.",
             "Réduit les temps d'exécution des requêtes dans le pire des cas de 48 heures à 30 secondes, améliorant considérablement l'efficacité du système et soutenant la continuité d'activité.",
-            "Optimisé les performances des requêtes de base de données sur plusieurs flux de travail, réduisant les temps d'exécution de plusieurs heures à seulement quelques secondes.",
-            "Visualisations et tableaux de bord Power BI pour fournir des informations exploitables aux parties prenantes, améliorant la prise de décision basée sur les données."
+            "Optimisé les performances des requêtes de base de données sur plusieurs flux de travail, réduisant les temps d'exécution de 48 heures à seulement 30 secondes pour les meilleurs cas.",
+            "Visualisations et dashboards Power BI pour fournir des informations exploitables aux parties prenantes, améliorant la prise de décision basée sur les données."
           ]
         },
         {
-          role: "Agent Informatique Temporaire",
+          role: "Travail intérimaire en Informatique",
           company: "Téréga",
           period: "Juin 2022 — Juillet 2022",
           tech: ["Excel", "SAP", "Gestion de données"],
           points: [
-            "Géré et maintenu les fichiers Excel et le logiciel SAP pour surveiller et suivre la progression des opérations de gazoducs."
+            "Géré et maintenu les fichiers Excel et le logiciel SAP pour surveiller et suivre la progression des opérations de gaz."
           ]
         }
       ]
@@ -263,14 +263,14 @@ export const translations = {
           slug: "clermont-foot-63",
         },
         {
-          title: "Application Web pour l'analyse de données pour le staff d'entraîneurs football",
-          description: "Construit un site Web pendant mon temps libre pour le staff d'entraînement de Manchester City pour analyser les données collectées.",
+          title: "Site web pour l'analyse de données pour un staff d'entraîneurs football",
+          description: "Construit un site web pendant mon temps libre pour le staff d'entraînement de Manchester City pour analyser les données collectées.",
           tech: ["Analyse de données", "Évaluation des besoins", "Tableaux de bord", "Visualisation de données"],
           slug: "hays-manchester-city",
         },
         {
           title: "Outil d'Analyse d'Accessibilité Web Alimenté par l'IA pour la Conformité RGAA",
-          description: "Automatiser le test des critères RGAA pour améliorer l'accessibilité Web pour les utilisateurs, y compris ceux en situation de handicap, tout en économisant du temps pour les équipes de développement pendant mon temps libre.",
+          description: "Automatiser le test des critères RGAA pour améliorer l'accessibilité web pour les utilisateurs, y compris ceux en situation de handicap, tout en économisant du temps pour les équipes de développement pendant mon temps libre.",
           tech: ["Python", "LLMs Multimodaux", "Azure OpenAI", "BLIP-2", "APIs"],
           slug: "bpce-solutions-informatiques",
         },
@@ -312,11 +312,11 @@ export const translations = {
         },
         {
           category: "Données",
-          skills: ["Nettoyage de données", "Visualisation de données", "Ingénierie des données", "Power BI", "ETL", "Pipelines de données", "Gestion de base de données", "Clustering"],
+          skills: ["Data Cleaning", "Data Visualization", "Data Engineering", "Power BI", "ETL", "Data Pipelines", "Gestion de bases de données", "Clustering"],
         },
         {
           category: "Intelligence Artificielle",
-          skills: ["Vision par ordinateur", "Traitement du langage naturel", "Apprentissage par renforcement", "Grands modèles de langage", "IA générative", "Ingénierie des caractéristiques", "Réglage des hyperparamètres"],
+          skills: ["Vision par ordinateur", "Natural Language Processing", "Apprentissage par renforcement", "Large Language Models", "IA générative", "Feature engineering", "Hyperparameter Tuning"],
         },
         {
           category: "Outils & Plateformes",
@@ -327,7 +327,7 @@ export const translations = {
     // Contact Section
     contact: {
       title: "Contact",
-      message: "Je suis toujours intéressé à entendre parler de nouveaux projets et opportunités. Que vous ayez une question ou que vous vouliez juste dire bonjour, n'hésitez pas à me contacter !",
+      message: "Je suis toujours intéressé pour parler de nouveaux projets et opportunités. Que vous ayez une question ou que vous vouliez juste dire bonjour, n'hésitez pas à me contacter !",
       emailCopied: "Email copié dans le presse-papiers",
       emailFailed: "Échec de la copie de l'email",
       phoneCopied: "Numéro de téléphone copié",
