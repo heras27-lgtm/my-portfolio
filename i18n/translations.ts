@@ -11,7 +11,7 @@ export const translations = {
     },
     mobileNotice: {
       title: "Best Viewed on Desktop",
-      message: "For an optimal experience and to see all features, I recommend viewing this portfolio on a desktop computer.",
+      message: "For an optimal experience and lisibility, I recommend viewing this portfolio on a desktop computer.",
       button: "Got it",
     },
     hero: {
@@ -179,7 +179,7 @@ export const translations = {
     },
     mobileNotice: {
       title: "Meilleure Expérience sur Ordinateur",
-      message: "Pour une expérience optimale et profiter de toutes les fonctionnalités, je vous recommande de consulter ce portfolio sur un ordinateur.",
+      message: "Pour une expérience et lisibilité optimale, je vous recommande de consulter ce portfolio sur un ordinateur.",
       button: "J'ai compris",
     },
     hero: {
@@ -194,7 +194,7 @@ export const translations = {
     },
     about: {
       title: "À propos",
-      intro: "Bonjour ! Je suis Alejandro, un passionné de data et d'IA basé à Pau, en France. Je suis motivé par l'exploitation de la puissance de l'information et la transformation de la data en connaissances significatives. Je suis fasciné par la façon dont l'information peut façonner la prise de décision de différentes manières, et c'est exactement pourquoi j'adore ce domaine.",
+      intro: "Bonjour ! Je suis Alejandro, un passionné de data et d'IA basé à Pau, en France. Je suis motivé par l'exploitation de la puissance de l'information et la transformation de la data en connaissances significatives. Je suis fasciné par la façon dont une même information peut façonner la prise de décision de différentes manières, et c'est exactement pourquoi j'adore ce domaine.",
       languages: "Je parle couramment l'espagnol et le français et j'ai un niveau C1 en anglais, ce qui me permet de communiquer et de travailler couramment dans des environnements anglophones.",
       motivated: "Je suis fortement motivé par l'innovation, l'apprentissage continu et je suis aussi empathique et profondément curieux.",
       degree: "Diplômé de CY Tech, je suis titulaire d'un diplôme d'ingénieur en Mathématiques et Informatique, spécialisé en Intelligence Artificielle.",
