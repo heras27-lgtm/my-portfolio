@@ -11,7 +11,7 @@ export const translations = {
     },
     mobileNotice: {
       title: "Best Viewed on Desktop",
-      message: "For an optimal experience and visibility, I recommend viewing this portfolio on a desktop computer.",
+      message: "For an optimal experience and to see all features, I recommend viewing this portfolio on a desktop computer.",
       button: "Got it",
     },
     hero: {
@@ -21,7 +21,7 @@ export const translations = {
       role: "Data Analyst, Data Scientist or AI Engineer",
       experience: "I bring one year of hands-on experience in Data engineering and AI analysis.",
       languages: "I am trilingual, speaking Spanish, French, and English.",
-      cta: "Learn more about my journey !",
+      cta: "Learn more about my journey!",
       scroll: "Scroll to explore",
     },
     about: {
@@ -30,7 +30,7 @@ export const translations = {
       languages: "I am a native speaker of Spanish and French and hold a C1 level in English, allowing me to communicate and work fluently in English-speaking environments.",
       motivated: "I'm highly motivated by innovation, continuous learning and I am also empathetic and deeply curious.",
       degree: "Graduated from CY Tech, I hold a Master's in Mathematics and Computer Science Engineering, specializing in Artificial Intelligence.",
-      exchange: "I also completed a 6-month semester exchange in India, where I contributed to an AI research project and further expanded my expertise by taking specialized courses in data science.",
+      exchange: "I also completed a 6-month exchange semester in India, where I contributed to an AI research project and further expanded my expertise by taking specialized courses in data science.",
       experience: "I have gained over a year of professional experience, including my role as a Data Engineer Intern at Groupe Coopératif Vivadour and as an AI Analyst Intern at Airbus.",
       technologies: "Here are a few technologies I've been working with recently:",
       hobbies: "Outside of work, I was a semi-professional handball player for 4 years, enjoy playing in a chess club, and am an avid reader of sociology and psychology books.",
@@ -45,7 +45,7 @@ export const translations = {
           tech: ["AGILE method", "AWS", "RAG", "Stakeholder needs analysis", "GCP", "Dashboards", "Products pricing", "AI product analysis", "Document redaction"],
           points: [
             "Conducted strategic analyses of AI solutions to identify high-impact opportunities aligned with business objectives and operational constraints.",
-            "Improved operational support for 1,000+ employees by leading comprehensive AI technology assessments in collaboration with Google and ServiceNow professionals. These assessments involved studying the architecture of different solutions, analyzing their recurring costs, non-recurring costs, time requirements, and evaluating the value they could bring to the enterprise. Beyond assessment, I deepened my knowledge by researching how AI solutions are valued across industries and reviewing state-of-the-art research papers.",
+            "Improved operational support for 1,000+ employees by leading comprehensive AI technology assessments in collaboration with Google and ServiceNow professionals. These assessments involved studying the architecture of different solutions, analyzing their recurring and non-recurring costs, time requirements, and evaluating the value they could bring to the enterprise. Beyond assessment, I deepened my knowledge by researching how AI solutions are valued across industries and reviewing state-of-the-art research papers.",
             "Influenced a €100k+ investment decision by providing actionable insights on AI solution feasibility, cost, and business value.",
             "Bridged business and technical needs by delivering scalable, value-driven AI features tailored to enterprise use cases, directly impacting an ongoing €4M+ digital transformation initiative.",
             "Contributed to the development of an internal AI assistant (chatbot) based on Retrieval-Augmented Generation (RAG), leveraging proprietary Airbus documentation with AWS S3, Lambda, Unstructured.io, and OpenSearch."
@@ -61,7 +61,7 @@ export const translations = {
             "Engineered a comprehensive ETL pipeline to efficiently collect, process, and transform raw data from the legacy system, enabling seamless ERP integration.",
             "Reduced worst-case query execution times from 48 hours to 30 seconds, significantly enhancing system efficiency and supporting business continuity.",
             "Optimized database query performance across multiple workflows, reducing execution times from several hours to just a few seconds.",
-            "Power BI visualizations and dashboards to provide actionable insights to stakeholders, enhancing data-driven decision-making."
+            "Created Power BI visualizations and dashboards to provide actionable insights to stakeholders, enhancing data-driven decision-making."
           ]
         },
         {
@@ -76,7 +76,7 @@ export const translations = {
       ]
     },
     projects: {
-      title: "Projets",
+      title: "Projects",
       viewProject: "View Project",
       list: [
         {
@@ -179,13 +179,13 @@ export const translations = {
     },
     mobileNotice: {
       title: "Meilleure Expérience sur Ordinateur",
-      message: "Pour une expérience optimale et une meilleure visibilité, je vous recommande de visiter ce portfolio sur un ordinateur.",
+      message: "Pour une expérience optimale et profiter de toutes les fonctionnalités, je vous recommande de consulter ce portfolio sur un ordinateur.",
       button: "J'ai compris",
     },
     hero: {
       greeting: "Bonjour, je m'appelle",
       tagline: "Guidé par la curiosité, alimenté par la data.",
-      description: "Passionné par la Data et l'IA, je recherche des opportunités en tant que",
+      description: "Passionné par la data et l'IA, je recherche des opportunités en tant que",
       role: "Data Analyst, Data Scientist ou Ingénieur IA",
       experience: "J'ai plus d'un an d'expérience entre Data et Intelligence Artificielle.",
       languages: "Je suis trilingue espagnol, français et anglais.",
@@ -194,12 +194,12 @@ export const translations = {
     },
     about: {
       title: "À propos",
-      intro: "Bonjour ! Je suis Alejandro, un passionné de Data et d'IA basé à Pau, en France. Je suis motivé par l'exploitation de la puissance de l'information et la transformation de la Data en connaissances significatives. Je suis fasciné par la façon dont l'information peut façonner une prise de décision de différentes manières et c'est exactement pourquoi j'adore ce domaine.",
+      intro: "Bonjour ! Je suis Alejandro, un passionné de data et d'IA basé à Pau, en France. Je suis motivé par l'exploitation de la puissance de l'information et la transformation de la data en connaissances significatives. Je suis fasciné par la façon dont l'information peut façonner la prise de décision de différentes manières, et c'est exactement pourquoi j'adore ce domaine.",
       languages: "Je parle couramment l'espagnol et le français et j'ai un niveau C1 en anglais, ce qui me permet de communiquer et de travailler couramment dans des environnements anglophones.",
       motivated: "Je suis fortement motivé par l'innovation, l'apprentissage continu et je suis aussi empathique et profondément curieux.",
       degree: "Diplômé de CY Tech, je suis titulaire d'un diplôme d'ingénieur en Mathématiques et Informatique, spécialisé en Intelligence Artificielle.",
-      exchange: "J'ai également complété un semestre d'échange de 6 mois en Inde, où j'ai contribué à un projet de recherche en IA et j'ai approfondi mes connaissances en Data Science.",
-      experience: "J'ai accumulé plus d'un an d'expérience professionnelle, notamment en tant que Stagiaire Data Engineer chez Groupe Coopératif Vivadour et Stagiaire IA Analyst chez Airbus.",
+      exchange: "J'ai également effectué un semestre d'échange de 6 mois en Inde, où j'ai contribué à un projet de recherche en IA et approfondi mes connaissances en data science.",
+      experience: "J'ai accumulé plus d'un an d'expérience professionnelle, notamment en tant que stagiaire Data Engineer chez Groupe Coopératif Vivadour et stagiaire IA Analyst chez Airbus.",
       technologies: "Voici quelques technologies avec lesquelles j'ai récemment travaillé :",
       hobbies: "En dehors du travail, j'ai été joueur de handball semi-professionnel pendant 4 ans, je suis joueur d'échecs en club et je suis un lecteur passionné de livres en sociologie et psychologie.",
     },
@@ -229,7 +229,7 @@ export const translations = {
             "Ingénierie d'un pipeline ETL complet pour collecter, traiter et transformer efficacement les données brutes du système hérité, permettant une intégration ERP transparente.",
             "Réduit les temps d'exécution des requêtes dans le pire des cas de 48 heures à 30 secondes, améliorant considérablement l'efficacité du système et soutenant la continuité d'activité.",
             "Optimisé les performances des requêtes de base de données sur plusieurs flux de travail, réduisant les temps d'exécution de 48 heures à seulement 30 secondes pour les meilleurs cas.",
-            "Visualisations et dashboards Power BI pour fournir des informations exploitables aux parties prenantes, améliorant la prise de décision basée sur les données."
+            "Créé des visualisations et tableaux de bord Power BI pour fournir des informations exploitables aux parties prenantes, améliorant la prise de décision basée sur les données."
           ]
         },
         {
