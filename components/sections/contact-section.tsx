@@ -37,21 +37,21 @@ export function ContactSection() {
           {/* Section Title */}
           <div className="flex items-center" style={{ gap: "2%" }}>
             <h2 className="font-bold" style={{ 
-              color: "#ccd6f6",
+              color: 'var(--text-primary)',
               fontSize: "clamp(1.5rem, 3vw, 2.5rem)"
             }}>
-              <span style={{ color: "#64ffda" }}>05.</span> {t.contact.title}
+              <span style={{ color: 'var(--text-accent)' }}>05.</span> {t.contact.title}
             </h2>
             <div className="flex-grow" style={{ 
-              backgroundColor: "rgba(100, 255, 218, 0.2)",
-              height: "1px"
+              backgroundColor: 'var(--surface-border)',
+              height: '1px'
             }} />
           </div>
 
           {/* Contact Section */}
           <div style={{ display: "flex", flexDirection: "column", gap: "1.5vh" }}>
             <p style={{ 
-              color: "#a8b2d1",
+              color: 'var(--text-body)',
               fontSize: "clamp(0.875rem, 1vw, 1.1rem)",
               lineHeight: "1.6"
             }}>
@@ -69,16 +69,19 @@ export function ContactSection() {
                   rel="noopener noreferrer"
                   aria-label="LinkedIn Profile"
                   style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    width: "clamp(2.5rem, 3vw, 3.5rem)",
-                    height: "clamp(2.5rem, 3vw, 3.5rem)",
-                    border: "1px solid rgba(100,255,218,0.3)",
-                    borderRadius: "0.6vw",
-                    color: "#64ffda"
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    width: 'clamp(2.5rem, 3vw, 3.5rem)',
+                    height: 'clamp(2.5rem, 3vw, 3.5rem)',
+                    border: '1px solid var(--chip-border)',
+                    borderRadius: '0.6vw',
+                    color: 'var(--text-accent)',
+                    backgroundColor: 'var(--chip-bg)'
                   }}
                   className="hover:opacity-80 transition-opacity"
+                  onMouseEnter={e => { e.currentTarget.style.backgroundColor = 'var(--surface-hover)' }}
+                  onMouseLeave={e => { e.currentTarget.style.backgroundColor = 'var(--chip-bg)' }}
                 >
                   <Linkedin size={"clamp(1rem, 1.4vw, 1.5rem)"} />
                 </a>
@@ -89,16 +92,19 @@ export function ContactSection() {
                   rel="noopener noreferrer"
                   aria-label="Instagram Profile"
                   style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    width: "clamp(2.5rem, 3vw, 3.5rem)",
-                    height: "clamp(2.5rem, 3vw, 3.5rem)",
-                    border: "1px solid rgba(100,255,218,0.3)",
-                    borderRadius: "0.6vw",
-                    color: "#64ffda"
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    width: 'clamp(2.5rem, 3vw, 3.5rem)',
+                    height: 'clamp(2.5rem, 3vw, 3.5rem)',
+                    border: '1px solid var(--chip-border)',
+                    borderRadius: '0.6vw',
+                    color: 'var(--text-accent)',
+                    backgroundColor: 'var(--chip-bg)'
                   }}
                   className="hover:opacity-80 transition-opacity"
+                  onMouseEnter={e => { e.currentTarget.style.backgroundColor = 'var(--surface-hover)' }}
+                  onMouseLeave={e => { e.currentTarget.style.backgroundColor = 'var(--chip-bg)' }}
                 >
                   <Instagram size={"clamp(1rem, 1.4vw, 1.5rem)"} />
                 </a>
@@ -112,18 +118,20 @@ export function ContactSection() {
                       .catch(() => toast.error(t.contact.emailFailed))
                   }}
                   style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    width: "clamp(2.5rem, 3vw, 3.5rem)",
-                    height: "clamp(2.5rem, 3vw, 3.5rem)",
-                    border: "1px solid rgba(100,255,218,0.3)",
-                    borderRadius: "0.6vw",
-                    color: "#64ffda",
-                    background: "transparent",
-                    cursor: "pointer"
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    width: 'clamp(2.5rem, 3vw, 3.5rem)',
+                    height: 'clamp(2.5rem, 3vw, 3.5rem)',
+                    border: '1px solid var(--chip-border)',
+                    borderRadius: '0.6vw',
+                    color: 'var(--text-accent)',
+                    backgroundColor: 'var(--chip-bg)',
+                    cursor: 'pointer'
                   }}
                   className="hover:opacity-80 transition-opacity font-mono"
+                  onMouseEnter={e => { e.currentTarget.style.backgroundColor = 'var(--surface-hover)' }}
+                  onMouseLeave={e => { e.currentTarget.style.backgroundColor = 'var(--chip-bg)' }}
                 >
                   <Mail size={"clamp(1rem, 1.4vw, 1.5rem)"} />
                 </button>
@@ -137,18 +145,20 @@ export function ContactSection() {
                       .catch(() => toast.error(t.contact.phoneFailed))
                   }}
                   style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    width: "clamp(2.5rem, 3vw, 3.5rem)",
-                    height: "clamp(2.5rem, 3vw, 3.5rem)",
-                    border: "1px solid rgba(100,255,218,0.3)",
-                    borderRadius: "0.6vw",
-                    color: "#64ffda",
-                    background: "transparent",
-                    cursor: "pointer"
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    width: 'clamp(2.5rem, 3vw, 3.5rem)',
+                    height: 'clamp(2.5rem, 3vw, 3.5rem)',
+                    border: '1px solid var(--chip-border)',
+                    borderRadius: '0.6vw',
+                    color: 'var(--text-accent)',
+                    backgroundColor: 'var(--chip-bg)',
+                    cursor: 'pointer'
                   }}
                   className="hover:opacity-80 transition-opacity font-mono"
+                  onMouseEnter={e => { e.currentTarget.style.backgroundColor = 'var(--surface-hover)' }}
+                  onMouseLeave={e => { e.currentTarget.style.backgroundColor = 'var(--chip-bg)' }}
                 >
                   <Phone size={"clamp(1rem, 1.4vw, 1.5rem)"} />
                 </button>

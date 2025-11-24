@@ -1,13 +1,24 @@
 "use client"
 
 import { useLanguage } from "@/context/LanguageContext"
+import { useEffect, useState } from "react"
+import { useTheme } from "next-themes"
 
 export function Hero() {
   const { t } = useLanguage()
+  const { resolvedTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => setMounted(true), [])
+
+  const accent = 'var(--text-accent)'
+  const textPrimary = 'var(--text-primary)'
+  const textSecondary = 'var(--text-secondary)'
+  const textBody = 'var(--text-body)'
+  const accentBgHover = mounted && resolvedTheme === "light" ? "rgba(200,107,60,0.1)" : "rgba(100, 255, 218, 0.1)"
 
   return (
     <main style={{ 
-        padding: "clamp(6%, 9%, 12%) 5% clamp(2%, 3%, 5%)",
+        padding: "clamp(4%, 6%, 8%) 5% clamp(2%, 3%, 5%)",
         width: "90%",
         margin: "0 auto"
       }}>
@@ -25,7 +36,7 @@ export function Hero() {
         {/* Greeting */}
         <div className="flex items-center" style={{ gap: "2%" }}>
           <p className="font-mono" style={{ 
-            color: "#64ffda",
+            color: accent,
             fontSize: "clamp(0.8rem, 0.9vw, 1.1rem)"
           }}>
             {t.hero.greeting}
@@ -35,14 +46,14 @@ export function Hero() {
         {/* Name */}
         <div>
           <h1 className="font-bold" style={{ 
-            color: "#ccd6f6",
+            color: textPrimary,
             fontSize: "clamp(2.2rem, 5vw, 5rem)",
             marginBottom: "2%"
           }}>
             Alejandro Heras Espinosa.
           </h1>
           <h2 className="font-bold" style={{ 
-            color: "#8892b0",
+            color: textSecondary,
             fontSize: "clamp(1.5rem, 3vw, 3.5rem)"
           }}>
             {t.hero.tagline}
@@ -51,13 +62,13 @@ export function Hero() {
 
         {/* Description */}
         <p style={{ 
-          color: "#a8b2d1",
+          color: textBody,
           fontSize: "clamp(0.9rem, 1vw, 1.1rem)",
           width: "min(100%, 80%)",
           lineHeight: "1.6"
         }}>
           {t.hero.description}{" "}
-          <span className="font-semibold" style={{ color: "#64ffda" }}>{t.hero.role}</span>.
+          <span className="font-semibold" style={{ color: accent }}>{t.hero.role}</span>.
           <br /> {t.hero.experience}
           <br /> {t.hero.languages}
         </p>
@@ -68,15 +79,15 @@ export function Hero() {
             href="#about"
             className="inline-block border rounded font-mono hover:bg-opacity-10 transition-all cta-button"
             style={{
-              borderColor: "#64ffda",
-              color: "#64ffda",
+              borderColor: accent,
+              color: accent,
               backgroundColor: "transparent",
               padding: "clamp(0.8rem, 1.2vw, 1.5rem) clamp(1.2rem, 2vw, 1.8rem)",
               fontSize: "clamp(0.8rem, 0.9vw, 1rem)",
               borderWidth: "2px"
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = "rgba(100, 255, 218, 0.1)"
+              e.currentTarget.style.backgroundColor = accentBgHover
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.backgroundColor = "transparent"
@@ -131,7 +142,7 @@ export function Hero() {
         `}</style>
         
         <p className="font-mono scroll-text" style={{ 
-          color: "#8892b0",
+          color: textSecondary,
           fontSize: "clamp(0.75rem, 0.9vw, 1rem)"
         }}>
           {t.hero.scroll}
@@ -141,14 +152,14 @@ export function Hero() {
         <div
           className="desktop-scroll border-2 rounded-full flex items-start justify-center"
           style={{ 
-            borderColor: "#64ffda",
+            borderColor: accent,
             width: "clamp(2.5rem, 3vw, 4rem)",
             height: "clamp(5rem, 7vh, 8rem)",
             padding: "clamp(0.3rem, 0.5vw, 0.6rem)"
           }}
         >
           <div className="rounded-full animate-bounce" style={{ 
-            backgroundColor: "#64ffda",
+            backgroundColor: accent,
             width: "15%",
             height: "30%"
           }} />
@@ -165,7 +176,7 @@ export function Hero() {
           >
             <path 
               d="M12 5V19M12 19L5 12M12 19L19 12" 
-              stroke="#64ffda" 
+              stroke={accent} 
               strokeWidth="2" 
               strokeLinecap="round" 
               strokeLinejoin="round"

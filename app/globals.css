@@ -8,39 +8,58 @@
 }
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  /* Harmonisation light mode: fond aligné sur la teinte du texte (hue 45) */
+  --background: oklch(0.98 0.015 45);
+  --foreground: oklch(0.25 0.04 45);
+  --card: oklch(0.98 0.015 45);
+  --card-foreground: oklch(0.25 0.04 45);
+  --popover: oklch(0.98 0.015 45);
+  --popover-foreground: oklch(0.25 0.04 45);
+  --primary: oklch(0.55 0.15 35);
+  --primary-foreground: oklch(0.98 0.015 75);
+  --secondary: oklch(0.92 0.02 70);
+  --secondary-foreground: oklch(0.25 0.04 45);
+  --muted: oklch(0.92 0.02 70);
+  --muted-foreground: oklch(0.52 0.05 50);
+  --accent: oklch(0.55 0.15 35);
+  --accent-foreground: oklch(0.98 0.015 75);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
+  --border: oklch(0.88 0.02 70);
+  --input: oklch(0.88 0.02 70);
+  --ring: oklch(0.55 0.15 35);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
   --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --sidebar: oklch(0.97 0.015 45);
+  --sidebar-foreground: oklch(0.25 0.04 45);
+  --sidebar-primary: oklch(0.55 0.15 35);
+  --sidebar-primary-foreground: oklch(0.98 0.015 75);
+  --sidebar-accent: oklch(0.92 0.02 70);
+  --sidebar-accent-foreground: oklch(0.25 0.04 45);
+  --sidebar-border: oklch(0.88 0.02 70);
+  --sidebar-ring: oklch(0.55 0.15 35);
+  /* Text role colors (light) */
+  --text-primary: #2D1B0E;
+  --text-secondary: #6B5344;
+  --text-body: #6B5344;
+  --text-accent: #C86B3C;
+  /* Surface & chip (light) */
+  --surface-subtle: rgba(200,107,60,0.02);
+  --surface-hover: rgba(200,107,60,0.05);
+  --surface-shadow: 0 0 30px rgba(200,107,60,0.12);
+  --surface-border: rgba(200,107,60,0.2);
+  --chip-bg: rgba(200,107,60,0.1);
+  --chip-border: rgba(200,107,60,0.2);
+  /* Project page specific (light) */
+  --project-bg: var(--background);
+  --project-hero-surface: var(--surface-subtle);
+  --project-image-bg: var(--surface-subtle);
+  /* About section divider (light) */
+  --about-divider: rgba(200,107,60,0.3);
 }
 
 .dark {
@@ -76,6 +95,24 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(0.269 0 0);
   --sidebar-ring: oklch(0.439 0 0);
+  /* Text role colors (dark) */
+  --text-primary: #ccd6f6;
+  --text-secondary: #8892b0;
+  --text-body: #a8b2d1;
+  --text-accent: #64ffda;
+  /* Surface & chip (dark) */
+  --surface-subtle: rgba(100,255,218,0.02);
+  --surface-hover: rgba(100,255,218,0.05);
+  --surface-shadow: 0 0 30px rgba(100,255,218,0.12);
+  --surface-border: rgba(100,255,218,0.2);
+  --chip-bg: rgba(100,255,218,0.1);
+  --chip-border: rgba(100,255,218,0.2);
+  /* Project page specific (dark) */
+  --project-bg: var(--background);
+  --project-hero-surface: var(--surface-subtle);
+  --project-image-bg: #ffffff;
+  /* About section divider (dark) */
+  --about-divider: rgba(100,255,218,0.2);
 }
 
 :root {
@@ -89,6 +126,10 @@
 :root {
   --font-sans: "Geist", "Geist Fallback";
   --font-mono: "Geist Mono", "Geist Mono Fallback";
+  /* Unified light background for hero + sections */
+  --section-bg-light: oklch(0.99 0.008 45 / 0.85);
+  /* Optional alias if referenced elsewhere */
+  --hero-bg-light: var(--section-bg-light);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -127,19 +168,68 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+.light {
+  /* Light-only component backgrounds */
+  --header-bg-light: oklch(0.99 0.008 45); /* opaque, plus de transparence */
+}
+
+/* Force header opaque in light mode */
+.light header {
+  background-color: oklch(0.99 0.008 45) !important;
+  opacity: 1 !important;
+  backdrop-filter: none !important;
+}
+
 @layer base {
   * {
-    border-color: hsl(var(--border));
-    outline-color: hsl(var(--ring) / 0.5);
+    border-color: var(--border);
+    outline-color: var(--ring);
   }
   body {
-    background-color: hsl(var(--background));
-    color: hsl(var(--foreground));
+    background-color: var(--background);
+    color: var(--foreground);
   }
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Contact button glow effect */
+.contact-button {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.contact-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+  transition: left 0.5s ease;
+}
+
+.contact-button:hover::before {
+  left: 100%;
+}
+
+.contact-button:hover {
+  box-shadow: 0 0 20px var(--text-accent), 0 0 40px var(--text-accent);
+  background-color: rgba(var(--text-accent-rgb), 0.1);
+  transform: translateY(-2px);
+}
+
+.light .contact-button:hover {
+  box-shadow: 0 0 20px rgba(200, 107, 60, 0.6), 0 0 40px rgba(200, 107, 60, 0.3);
+  background-color: rgba(200, 107, 60, 0.1);
+}
+
+.dark .contact-button:hover {
+  box-shadow: 0 0 20px rgba(100, 255, 218, 0.6), 0 0 40px rgba(100, 255, 218, 0.3);
+  background-color: rgba(100, 255, 218, 0.1);
 }
 
 /* Anchor offset so titles are visible below fixed header */

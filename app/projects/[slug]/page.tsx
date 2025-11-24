@@ -53,14 +53,18 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
         .project-container { padding-top: 5vh; }
         @media (max-width: 640px) { .project-container { padding-top: 9.5vh; } }
       `}</style>
-      <div className="min-h-screen project-container" style={{ backgroundColor: "#0f1419" }}>
+      <div
+        className="min-h-screen project-container"
+        style={{
+          backgroundColor: 'var(--project-bg)'
+        }}
+      >
         <Header />
       
-      {/* Project Hero */}
+      {/* Project Hero (full width, no surface box) */}
       <section style={{ 
-        padding: "clamp(4%, 7%, 10%) clamp(3%, 5%, 8%) clamp(4%, 6%, 10%)",
-        width: "90%",
-        margin: "0 auto"
+        padding: "clamp(4%, 7%, 10%) clamp(5%, 7%, 10%) clamp(4%, 6%, 10%)",
+        backgroundColor: 'transparent'
       }}>
         <div style={{ display: "flex", flexDirection: "column", gap: "2vh" }}>
           {/* Back Link */}
@@ -68,7 +72,7 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
             href="/#projects"
             className="inline-flex items-center font-mono transition-all hover:gap-3"
             style={{ 
-              color: "#64ffda",
+              color: 'var(--text-accent)',
               fontSize: "clamp(0.75rem, 0.9vw, 1rem)",
               gap: "1%",
               marginBottom: "2%"
@@ -80,7 +84,7 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
 
           {/* Title */}
           <h1 className="font-bold" style={{ 
-            color: "#ccd6f6",
+            color: 'var(--text-primary)',
             fontSize: "clamp(1.75rem, 4vw, 3.5rem)",
             marginBottom: "1%"
           }}>
@@ -90,33 +94,33 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
           {/* Meta Info */}
           <div className="flex flex-wrap" style={{ gap: "3%", marginBottom: "2%" }}>
             <div>
-              <span className="font-mono" style={{ color: "#8892b0", fontSize: "clamp(0.75rem, 0.9vw, 1rem)" }}>
-                {t.projectPage.year}: <span style={{ color: "#64ffda" }}>{projectMeta.year}</span>
+              <span className="font-mono" style={{ color: 'var(--text-secondary)', fontSize: "clamp(0.75rem, 0.9vw, 1rem)" }}>
+                {t.projectPage.year}: <span style={{ color: 'var(--text-accent)' }}>{projectMeta.year}</span>
               </span>
             </div>
             <div>
-              <span className="font-mono" style={{ color: "#8892b0", fontSize: "clamp(0.75rem, 0.9vw, 1rem)" }}>
-                {t.projectPage.role}: <span style={{ color: "#64ffda" }}>{projectMeta.role}</span>
+              <span className="font-mono" style={{ color: 'var(--text-secondary)', fontSize: "clamp(0.75rem, 0.9vw, 1rem)" }}>
+                {t.projectPage.role}: <span style={{ color: 'var(--text-accent)' }}>{projectMeta.role}</span>
               </span>
             </div>
           </div>
 
           {/* Tech Stack */}
           <div className="flex flex-wrap" style={{ gap: "1%", rowGap: "1vh", marginBottom: "3%" }}>
-            {projectMeta.tech.map((t) => (
+            {projectMeta.tech.map((tech) => (
               <span
-                key={t}
+                key={tech}
                 className="rounded"
                 style={{
-                  backgroundColor: "rgba(100, 255, 218, 0.1)",
-                  color: "#64ffda",
-                  borderColor: "rgba(100, 255, 218, 0.2)",
-                  border: "1px solid",
-                  fontSize: "clamp(0.7rem, 0.8vw, 0.95rem)",
-                  padding: "0.5% 1.5%"
+                  backgroundColor: 'var(--chip-bg)',
+                  color: 'var(--text-accent)',
+                  borderColor: 'var(--chip-border)',
+                  border: '1px solid',
+                  fontSize: 'clamp(0.7rem, 0.8vw, 0.95rem)',
+                  padding: '0.5% 1.5%'
                 }}
               >
-                {t}
+                {tech}
               </span>
             ))}
           </div>
@@ -125,13 +129,13 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
           <div
             className="rounded border overflow-hidden"
             style={{
-              borderColor: "rgba(100, 255, 218, 0.2)",
-              width: "100%",
-              height: "clamp(20vh, 40vh, 50vh)",
-              position: "relative",
-              marginBottom: "4%",
-              backgroundColor: "white",
-              padding: "clamp(2%, 3%, 5%) clamp(10%, 20%, 30%)"
+              borderColor: 'var(--surface-border)',
+              width: '100%',
+              height: 'clamp(20vh, 40vh, 50vh)',
+              position: 'relative',
+              marginBottom: '4%',
+              backgroundColor: '#ffffff',
+              padding: 'clamp(2%, 3%, 5%) clamp(10%, 20%, 30%)'
             }}
           >
             <Image
@@ -145,14 +149,14 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
           {/* Description */}
           <div style={{ display: "flex", flexDirection: "column", gap: "2vh" }}>
             <h2 className="font-bold" style={{ 
-              color: "#ccd6f6",
+              color: 'var(--text-primary)',
               fontSize: "clamp(1.3rem, 2vw, 2rem)"
             }}>
               {t.projectPage.overview}
             </h2>
             <div
               style={{ 
-                color: "#a8b2d1",
+                color: 'var(--text-body)',
                 fontSize: "clamp(0.9rem, 1vw, 1.1rem)",
                 lineHeight: "1.8",
                 whiteSpace: "pre-line"
@@ -168,15 +172,18 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
                 href={projectMeta.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center font-mono transition-all hover:gap-3 rounded border hover:shadow-[0_0_20px_rgba(100,255,218,0.4)]"
+                className="inline-flex items-center font-mono transition-all hover:gap-3 rounded border"
                 style={{ 
-                  color: "#64ffda",
+                  color: 'var(--text-accent)',
                   fontSize: "clamp(0.8rem, 0.9vw, 1rem)",
                   gap: "1%",
                   padding: "1% 3%",
-                  borderColor: "#64ffda",
-                  whiteSpace: "nowrap"
+                  borderColor: 'var(--text-accent)',
+                  whiteSpace: "nowrap",
+                  backgroundColor: 'transparent'
                 }}
+                onMouseEnter={e => { e.currentTarget.style.backgroundColor = 'var(--surface-hover)' }}
+                onMouseLeave={e => { e.currentTarget.style.backgroundColor = 'transparent' }}
               >
                 {t.projectPage.viewDemo}
                 <span>→</span>
@@ -187,16 +194,18 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
                 href={projectMeta.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center font-mono transition-all hover:gap-3 rounded border hover:shadow-[0_0_20px_rgba(100,255,218,0.4)]"
+                className="inline-flex items-center font-mono transition-all hover:gap-3 rounded border"
                 style={{ 
-                  color: "#64ffda",
+                  color: 'var(--text-accent)',
                   fontSize: "clamp(0.8rem, 0.9vw, 1rem)",
                   gap: "1%",
                   padding: "1% 3%",
-                  borderColor: "rgba(100, 255, 218, 0.3)",
-                  backgroundColor: "rgba(100, 255, 218, 0.05)",
+                  borderColor: 'var(--chip-border)',
+                  backgroundColor: 'var(--chip-bg)',
                   whiteSpace: "nowrap"
                 }}
+                onMouseEnter={e => { e.currentTarget.style.backgroundColor = 'var(--surface-hover)' }}
+                onMouseLeave={e => { e.currentTarget.style.backgroundColor = 'var(--chip-bg)' }}
               >
                 {t.projectPage.viewOnGithub}
                 <span>→</span>

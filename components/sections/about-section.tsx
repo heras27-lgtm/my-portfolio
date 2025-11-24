@@ -27,13 +27,13 @@ export function AboutSection() {
           {/* Section Title */}
           <div className="flex items-center" style={{ gap: "2%" }}>
             <h2 className="font-bold" style={{ 
-              color: "#ccd6f6",
+              color: 'var(--text-primary)',
               fontSize: "clamp(1.5rem, 3vw, 2.5rem)"
             }}>
-              <span style={{ color: "#64ffda" }}>01.</span> {t.about.title}
+              <span style={{ color: 'var(--text-accent)' }}>01.</span> {t.about.title}
             </h2>
             <div className="flex-grow" style={{ 
-              backgroundColor: "rgba(100, 255, 218, 0.2)",
+              backgroundColor: 'var(--about-divider)',
               height: "1px"
             }} />
           </div>
@@ -42,7 +42,7 @@ export function AboutSection() {
           <div className="grid md:grid-cols-3" style={{ gap: "5%" }}>
             <div className="md:col-span-2" style={{ display: "flex", flexDirection: "column", gap: "1.5vh" }}>
               <p style={{ 
-                color: "#a8b2d1",
+                color: 'var(--text-body)',
                 fontSize: "clamp(0.9rem, 1vw, 1.1rem)",
                 lineHeight: "1.6",
                 textAlign: "justify"
@@ -51,7 +51,7 @@ export function AboutSection() {
               </p>
 
               <p style={{ 
-                color: "#a8b2d1",
+                color: 'var(--text-body)',
                 fontSize: "clamp(0.9rem, 1vw, 1.1rem)",
                 lineHeight: "1.6",
                 textAlign: "justify"
@@ -61,7 +61,7 @@ export function AboutSection() {
               </p>
 
               <p style={{ 
-                color: "#a8b2d1",
+                color: 'var(--text-body)',
                 fontSize: "clamp(0.9rem, 1vw, 1.1rem)",
                 lineHeight: "1.6",
                 textAlign: "justify"
@@ -70,7 +70,7 @@ export function AboutSection() {
               </p>
 
               <p style={{ 
-                color: "#a8b2d1",
+                color: 'var(--text-body)',
                 fontSize: "clamp(0.9rem, 1vw, 1.1rem)",
                 lineHeight: "1.6",
                 textAlign: "justify"
@@ -79,7 +79,7 @@ export function AboutSection() {
               </p>
 
                <p style={{ 
-                color: "#a8b2d1",
+                color: 'var(--text-body)',
                 fontSize: "clamp(0.9rem, 1vw, 1.1rem)",
                 lineHeight: "1.6",
                 textAlign: "justify"
@@ -88,7 +88,7 @@ export function AboutSection() {
               </p>
 
               <p style={{ 
-                color: "#a8b2d1",
+                color: 'var(--text-body)',
                 fontSize: "clamp(0.9rem, 1vw, 1.1rem)",
                 lineHeight: "1.6",
                 textAlign: "justify"
@@ -99,14 +99,14 @@ export function AboutSection() {
               <div className="grid grid-cols-2" style={{ gap: "2%", paddingTop: "2%" }}>
                 {['Python','SQL','C', 'Jira', 'AWS', 'GitHub'].map((tech) => (
                   <div key={tech} className="flex items-center" style={{ gap: "1%" }}>
-                    <span style={{ color: "#64ffda", fontSize: "clamp(0.9rem, 1vw, 1.1rem)" }}>▸</span>
-                    <span style={{ color: "#ccd6f6", fontSize: "clamp(0.9rem, 1vw, 1.1rem)" }}>{tech}</span>
+                    <span style={{ color: 'var(--text-accent)', fontSize: "clamp(0.9rem, 1vw, 1.1rem)" }}>▸</span>
+                    <span style={{ color: 'var(--text-primary)', fontSize: "clamp(0.9rem, 1vw, 1.1rem)" }}>{tech}</span>
                   </div>
                 ))}
               </div>
 
               <p style={{ 
-                  color: "#a8b2d1",
+                  color: 'var(--text-body)',
                   paddingTop: "2%",
                   fontSize: "clamp(0.9rem, 1vw, 1.1rem)",
                   lineHeight: "1.6",
@@ -121,7 +121,7 @@ export function AboutSection() {
               <div
                 className="rounded border-2 overflow-hidden"
                 style={{
-                  borderColor: "rgba(100, 255, 218, 0.2)",
+                  borderColor: 'var(--about-divider)',
                   width: "12vw",
                   height: "12vw",
                   position: "relative"

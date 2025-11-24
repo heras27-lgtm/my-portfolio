@@ -20,19 +20,51 @@ export function ExperienceSection() {
               margin-bottom: 7vh !important;
             }
           }
+          
+          /* Effets de lumière discrets et distincts pour Experience */
+          .experience-card {
+            position: relative;
+            overflow: hidden;
+            transition: background-color 0.4s ease, box-shadow 0.4s ease;
+            background: linear-gradient(135deg, var(--surface-subtle) 0%, transparent 60%);
+          }
+          .experience-card::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background: var(--text-accent);
+            opacity: 0.6;
+            transition: width 0.4s ease;
+          }
+          .experience-card:hover::before,
+          .experience-card:active::before {
+            width: 100%;
+          }
+          .experience-card:hover,
+          .experience-card:active {
+            box-shadow: inset 0 0 0 1px var(--chip-border), 0 0 12px -8px var(--chip-border);
+            background-color: var(--surface-subtle);
+          }
+          .light .experience-card:hover,
+          .light .experience-card:active {
+            box-shadow: inset 0 0 0 1px rgba(200,107,60,0.25), 0 0 12px -8px rgba(200,107,60,0.18);
+          }
         `}</style>
         <div style={{ display: "flex", flexDirection: "column", gap: "2vh" }}>
           {/* Section Title */}
           <div className="flex items-center" style={{ gap: "2%" }}>
             <h2 className="font-bold" style={{ 
-              color: "#ccd6f6",
+              color: 'var(--text-primary)',
               fontSize: "clamp(1.5rem, 3vw, 2.5rem)"
             }}>
-              <span style={{ color: "#64ffda" }}>02.</span> {t.experience.title}
+              <span style={{ color: 'var(--text-accent)' }}>02.</span> {t.experience.title}
             </h2>
             <div className="flex-grow" style={{ 
-              backgroundColor: "rgba(100, 255, 218, 0.2)",
-              height: "1px"
+              backgroundColor: 'var(--surface-border)',
+              height: '1px'
             }} />
           </div>
 
@@ -50,52 +82,52 @@ export function ExperienceSection() {
                   href={companyUrls[idx]}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="border-l-2 transition-all duration-700 ease-out hover:border-l-4 cursor-pointer group hover:shadow-[0_0_40px_rgba(100,255,218,0.2)] rounded-r hover:bg-[rgba(100,255,218,0.03)]"
+                  className={'border-l-2 transition-all duration-700 ease-out cursor-pointer group rounded-r experience-card'}
                   style={{ 
-                    borderColor: "rgba(100, 255, 218, 0.2)",
-                    paddingLeft: "3%",
-                    display: "block",
-                    textDecoration: "none",
-                    backgroundColor: "transparent",
-                    paddingTop: "2%",
-                    paddingBottom: "2%",
-                    paddingRight: "2%"
+                    borderColor: 'var(--surface-border)',
+                    paddingLeft: '3%',
+                    display: 'block',
+                    textDecoration: 'none',
+                    paddingTop: '2%',
+                    paddingBottom: '2%',
+                    paddingRight: '2%',
+                    
                   }}
                 >
                   <div style={{ display: "flex", alignItems: "baseline", gap: "2%", marginBottom: "1%" }}>
-                    <h3 className="font-bold group-hover:text-[#64ffda] transition-colors duration-700 ease-out" style={{ color: "#ccd6f6", fontSize: "clamp(1.2rem, 1.6vw, 1.8rem)" }}>
+                    <h3 className="font-bold transition-colors duration-700 ease-out" style={{ color: 'var(--text-primary)', fontSize: "clamp(1.2rem, 1.6vw, 1.8rem)" }}>
                       {job.role}
                     </h3>
-                    <span className="font-mono group-hover:opacity-100 transition-all duration-700 ease-out group-hover:translate-x-[0.3vw]" style={{ color: "#64ffda", fontSize: "clamp(0.8rem, 0.9vw, 1rem)", opacity: 0.8 }}>@ {job.company}</span>
+                    <span className="font-mono group-hover:opacity-100 transition-all duration-700 ease-out group-hover:translate-x-[0.3vw]" style={{ color: 'var(--text-accent)', fontSize: "clamp(0.8rem, 0.9vw, 1rem)", opacity: 0.8 }}>@ {job.company}</span>
                   </div>
-                  <p className="font-mono" style={{ color: "#8892b0", fontSize: "clamp(0.8rem, 0.9vw, 1rem)", marginBottom: "1.5%" }}>
+                  <p className="font-mono" style={{ color: 'var(--text-secondary)', fontSize: "clamp(0.8rem, 0.9vw, 1rem)", marginBottom: "1.5%" }}>
                     {job.period}
                   </p>
 
                   <ul style={{ display: "flex", flexDirection: "column", gap: "1vh", marginBottom: "2%" }}>
                     {job.points.map((pt) => (
-                      <li key={pt} className="flex" style={{ gap: "1%", color: "#a8b2d1", fontSize: "clamp(0.9rem, 1vw, 1.1rem)", lineHeight: 1.6 }}>
-                        <span style={{ color: "#64ffda" }}>▸</span>
+                      <li key={pt} className="flex" style={{ gap: "1%", color: 'var(--text-body)', fontSize: "clamp(0.9rem, 1vw, 1.1rem)", lineHeight: 1.6 }}>
+                        <span style={{ color: 'var(--text-accent)' }}>▸</span>
                         <span>{pt}</span>
                       </li>
                     ))}
                   </ul>
                   
                   <div className="flex flex-wrap" style={{ gap: "1% 1%", rowGap: "1.5vh", marginTop: "2%" }}>
-                    {job.tech.map((t) => (
+                    {job.tech.map((tech) => (
                       <span
-                        key={t}
-                        className="rounded"
+                        key={tech}
+                        className='rounded'
                         style={{
-                          backgroundColor: "rgba(100, 255, 218, 0.1)",
-                          color: "#64ffda",
-                          borderColor: "rgba(100, 255, 218, 0.2)",
-                          border: "1px solid",
-                          fontSize: "clamp(0.7rem, 0.8vw, 0.95rem)",
-                          padding: "0.5% 1.5%"
+                          backgroundColor: 'var(--chip-bg)',
+                          color: 'var(--text-accent)',
+                          borderColor: 'var(--chip-border)',
+                          border: '1px solid',
+                          fontSize: 'clamp(0.7rem, 0.8vw, 0.95rem)',
+                          padding: '0.5% 1.5%'
                         }}
                       >
-                        {t}
+                        {tech}
                       </span>
                     ))}
                   </div>

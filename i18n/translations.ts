@@ -10,6 +10,12 @@ export const translations = {
       skills: "Skills",
       contact: "Contact",
     },
+    // Mobile Notice
+    mobileNotice: {
+      title: "Best Viewed on Desktop",
+      message: "For an optimal experience and visibility, I recommend viewing this portfolio on a desktop computer.",
+      button: "Got it",
+    },
     // Hero Section
     hero: {
       greeting: "Hi, my name is",
@@ -87,7 +93,7 @@ export const translations = {
         },
         {
           title: "Football Data Analysis Personal Project",
-          description: "Developed a supplementary project in Python to support a job interview with Clermont Foot 63.",
+          description: "Collected and cleaned publicly available data from the 2024/2025 season to analyze Clermont Foot 63's team performance trends.",
           tech: ["Python", "Data Cleaning", "Data Visualization", "Matplotlib", "Pandas", "NumPy"],
           slug: "clermont-foot-63",
         },
@@ -180,6 +186,12 @@ export const translations = {
       projects: "Projets",
       skills: "Compétences",
       contact: "Contact",
+    },
+    // Mobile Notice
+    mobileNotice: {
+      title: "Meilleure Expérience sur Ordinateur",
+      message: "Pour une expérience optimale et une meilleure visibilité, je vous recommande de visiter ce portfolio sur un ordinateur.",
+      button: "J'ai compris",
     },
     // Hero Section
     hero: {

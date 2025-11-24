@@ -6,11 +6,11 @@ export const projectsData = {
         "Automate the testing of RGAA criteria to improve web accessibility for users, including those with disabilities, while saving time for development teams during my personal time.",
       longDescription: `La Mêlée's Hackathon - BPCE Solutions Informatiques Project - 1st Place (done in my personal time)
 
-    <span style="color:#64ffda">Objective:</span> Automate the testing of RGAA criteria to improve web accessibility for users, including those with disabilities, while saving time for development teams.
+    <span style="color:var(--text-accent)">Objective:</span> Automate the testing of RGAA criteria to improve web accessibility for users, including those with disabilities, while saving time for development teams.
 
-    <span style="color:#64ffda">Challenge:</span> Only ~30% of RGAA criteria can be automatically tested with current tools. Manual reviews are time-consuming, and AI could help expand coverage while using resources responsibly.
+    <span style="color:var(--text-accent)">Challenge:</span> Only ~30% of RGAA criteria can be automatically tested with current tools. Manual reviews are time-consuming, and AI could help expand coverage while using resources responsibly.
 
-    <span style="color:#64ffda">Approach:</span>
+    <span style="color:var(--text-accent)">Approach:</span>
 
     • Analyzed RGAA criteria to determine which rules required AI intervention.
 
@@ -32,7 +32,7 @@ export const projectsData = {
 
     •  Implemented the solution using Azure OpenAI for model execution.
 
-    💡 <span style="color:#64ffda">Skills Gained:</span>
+    💡 <span style="color:var(--text-accent)">Skills Gained:</span>
 
     • Deep understanding of digital accessibility and the challenges faced by people with disabilities
 
@@ -48,7 +48,7 @@ export const projectsData = {
       title: "AI Chatbot & Search Feature",
       description:
         "Developed an intelligent RAG-powered chatbot and search feature with semantic search capabilities to enhance user engagement with sustainable energy solutions.",
-      longDescription: `<span style="color:#64ffda"> AI Chatbot & Search Feature Final Studies Project for Kerdos Energy:</span>
+      longDescription: `<span style="color:var(--text-accent)"> AI Chatbot & Search Feature Final Studies Project for Kerdos Energy:</span>
 
             • Developed an intelligent RAG-powered chatbot with semantic search capabilities to enhance user engagement with sustainable energy solutions.
 
@@ -64,7 +64,7 @@ export const projectsData = {
 
             • Containerized the application using Docker and integrated Mistral LLM for French comprehension and context-specific solutions.
 
-            💡 <span style="color:#64ffda">Skills Gained:</span>
+            💡 <span style="color:var(--text-accent)">Skills Gained:</span>
 
             • In-depth RAG comprehension and end-to-end development capabilities
 
@@ -82,7 +82,7 @@ export const projectsData = {
       title: "Simulating Passenger Flow Data Challenge",
       description:
         "Designed a simulation using Dijkstra's algorithm and Graph Neural Networks (GNNs) to model passenger flow in disrupted metro networks while maintaining environmental sustainability standards during my personal time.",
-      longDescription: `<span style="color:#64ffda">Data Challenge on Simulating Passenger Flow - Alstom Project - 1st Place (done in my personal time): </span>
+      longDescription: `<span style="color:var(--text-accent)">Data Challenge on Simulating Passenger Flow - Alstom Project - 1st Place (done in my personal time): </span>
 
     • Designed a simulation using Dijkstra's algorithm and Graph Neural Networks (GNNs) to model passenger flow in disrupted metro networks while maintaining environmental sustainability standards.
 
@@ -100,7 +100,7 @@ export const projectsData = {
 
     • Presented the solution in a competitive context, showcasing practical applicability and business relevance.
 
-    💡 <span style="color:#64ffda">Skills Gained:</span>
+    💡 <span style="color:var(--text-accent)">Skills Gained:</span>
 
     • Data Visualization & Analysis: Interpreting complex metro network data for decision-making
 
@@ -120,7 +120,7 @@ export const projectsData = {
         "Developed a data exploration project using a dataset provided by Section Paloise.",
       longDescription: `
 
-        <span style="color:#64ffda">Data Exploration & Visualization Project :</span>
+        <span style="color:var(--text-accent)">Data Exploration & Visualization Project :</span>
 
         • Developed a data exploration project using a dataset provided by Section Paloise.
 
@@ -136,7 +136,7 @@ export const projectsData = {
 
         • Focused on clear and concise visualizations to make the analysis accessible and interpretable for non-technical stakeholders.
 
-        💡 <span style="color:#64ffda">Skills Gained:</span>
+        💡 <span style="color:var(--text-accent)">Skills Gained:</span>
 
         • Python programming for data analysis and visualization
 
@@ -150,7 +150,7 @@ export const projectsData = {
       title: "Football Data Analysis Personal Project",
       description:
         "Developed a supplementary project in Python to support a job interview with Clermont Foot 63.",
-      longDescription: `<span style="color:#64ffda">Clermont Foot 63 Data Analysis Project :</span>
+      longDescription: `<span style="color:var(--text-accent)">Clermont Foot 63 Data Analysis Project :</span>
     • Developed a supplementary project in Python to support a job interview with Clermont Foot 63.
 
     • Collected and cleaned publicly available data from the 2024/2025 season to analyze team performance trends.
@@ -163,7 +163,7 @@ export const projectsData = {
 
     • Emphasized that this was a personal project for learning and exploration, with no commercial value.
 
-    💡 <span style="color:#64ffda">Skills Gained:</span>
+    💡 <span style="color:var(--text-accent)">Skills Gained:</span>
     • Python programming & Matplotlib for data analysis and visualization
 
     • Advanced data cleaning, processing, and exploratory analysis
@@ -178,7 +178,7 @@ export const projectsData = {
       title: "Web application for football coaching staff to analyze data",
       description:
         "Built a website during my personal time for Manchester City coaching staff to analyze data collected.",
-      longDescription: `<span style="color:#64ffda">Manchester City x Hays Website Project:</span>
+      longDescription: `<span style="color:var(--text-accent)">Manchester City x Hays Website Project:</span>
 
     • Built a web application for coaching staff to analyze data collected.
 
@@ -188,7 +188,7 @@ export const projectsData = {
 
     • Developed with Flask to run Python scripts in real time, providing instant tactical insights.
 
-    💡 <span style="color:#64ffda">Skills Gained:</span>
+    💡 <span style="color:var(--text-accent)">Skills Gained:</span>
 
     • Data Analysis: Extracted actionable insights from raw performance data
 
@@ -204,7 +204,7 @@ export const projectsData = {
       title: "Brain Tumor Detection using CNN",
       description:
         "Independently developed a CNN model for medical imaging for brain tumor detection.",
-      longDescription: `<span style="color:#64ffda">Deep Learning Research Project – Semester Exchange in BK BIET in India - Brain Tumor Detection:</span>
+      longDescription: `<span style="color:var(--text-accent)">Deep Learning Research Project – Semester Exchange in BK BIET in India - Brain Tumor Detection:</span>
 
     • Conducted an independent research mission on deep learning applications in medical imaging.
 
@@ -214,7 +214,7 @@ export const projectsData = {
 
     • Explored and compared multiple machine learning techniques to enhance performance and robustness.
 
-    <span style="color:#64ffda">Key Outcomes & Skills Gained:</span>
+    <span style="color:var(--text-accent)">Key Outcomes & Skills Gained:</span>
 
     • Acquired strong Computer Vision and Deep Learning expertise, with in-depth comprehension of CNN architectures.
 
@@ -236,11 +236,11 @@ export const projectsData = {
         "Automatiser le test des critères RGAA pour améliorer l'accessibilité Web pour les utilisateurs, y compris ceux en situation de handicap, tout en économisant du temps pour les équipes de développement pendant mon temps libre.",
       longDescription: `Hackathon La Mêlée - Projet BPCE Solutions Informatiques - 1ère Place (réalisé pendant mon temps libre)
 
-    <span style="color:#64ffda">Objectif :</span> Automatiser le test des critères RGAA pour améliorer l'accessibilité Web pour les utilisateurs, y compris ceux en situation de handicap, tout en économisant du temps pour les équipes de développement.
+    <span style="color:var(--text-accent)">Objectif :</span> Automatiser le test des critères RGAA pour améliorer l'accessibilité Web pour les utilisateurs, y compris ceux en situation de handicap, tout en économisant du temps pour les équipes de développement.
 
-    <span style="color:#64ffda">Défi :</span> Seulement ~30% des critères RGAA peuvent être testés automatiquement avec les outils actuels. Les révisions manuelles sont chronophages, et l'IA pourrait aider à élargir la couverture tout en utilisant les ressources de manière responsable.
+    <span style="color:var(--text-accent)">Défi :</span> Seulement ~30% des critères RGAA peuvent être testés automatiquement avec les outils actuels. Les révisions manuelles sont chronophages, et l'IA pourrait aider à élargir la couverture tout en utilisant les ressources de manière responsable.
 
-    <span style="color:#64ffda">Approche :</span>
+    <span style="color:var(--text-accent)">Approche :</span>
 
     • Analysé les critères RGAA pour déterminer quelles règles nécessitaient une intervention IA.
 
@@ -262,7 +262,7 @@ export const projectsData = {
 
     •  Implémenté la solution à l'aide d'Azure OpenAI pour l'exécution du modèle.
 
-    💡 <span style="color:#64ffda">Compétences acquises :</span>
+    💡 <span style="color:var(--text-accent)">Compétences acquises :</span>
 
     • Compréhension approfondie de l'accessibilité numérique et des défis auxquels font face les personnes en situation de handicap
 
@@ -278,7 +278,7 @@ export const projectsData = {
       title: "Chatbot IA et Fonctionnalité de Recherche",
       description:
         "Développé un chatbot alimenté par RAG intelligent et une fonctionnalité de recherche avec capacités de recherche sémantique pour améliorer l'engagement des utilisateurs avec les solutions d'énergie durable.",
-      longDescription: `<span style="color:#64ffda"> Projet Final d'Études - Chatbot IA et Fonctionnalité de Recherche pour Kerdos Energy :</span>
+      longDescription: `<span style="color:var(--text-accent)"> Projet Final d'Études - Chatbot IA et Fonctionnalité de Recherche pour Kerdos Energy :</span>
 
             • Développé un chatbot alimenté par RAG intelligent avec des capacités de recherche sémantique pour améliorer l'engagement des utilisateurs avec les solutions d'énergie durable.
 
@@ -294,7 +294,7 @@ export const projectsData = {
 
             • Conteneurisé l'application en utilisant Docker et intégré le LLM Mistral pour la compréhension du français et les solutions spécifiques au contexte.
 
-            💡 <span style="color:#64ffda">Compétences acquises :</span>
+            💡 <span style="color:var(--text-accent)">Compétences acquises :</span>
 
             • Compréhension approfondie de RAG et capacités de développement de bout en bout
 
@@ -312,7 +312,7 @@ export const projectsData = {
       title: "Défi de Simulation de Données de Flux de Passagers",
       description:
         "Conçu une simulation utilisant l'algorithme de Dijkstra et les réseaux de neurones graphiques (GNNs) pour modéliser le flux de passagers dans les réseaux de métro perturbés tout en maintenant les normes de durabilité environnementale pendant mon temps libre.",
-      longDescription: `<span style="color:#64ffda">Défi de Données sur la Simulation du Flux de Passagers - Projet Alstom - 1ère Place (réalisé pendant mon temps libre) : </span>
+      longDescription: `<span style="color:var(--text-accent)">Défi de Données sur la Simulation du Flux de Passagers - Projet Alstom - 1ère Place (réalisé pendant mon temps libre) : </span>
 
     • Conçu une simulation utilisant l'algorithme de Dijkstra et les réseaux de neurones graphiques (GNNs) pour modéliser le flux de passagers dans les réseaux de métro perturbés tout en maintenant les normes de durabilité environnementale.
 
@@ -330,7 +330,7 @@ export const projectsData = {
 
     • Présenté la solution dans un contexte compétitif, mettant en évidence l'applicabilité pratique et la pertinence commerciale.
 
-    💡 <span style="color:#64ffda">Compétences acquises :</span>
+    💡 <span style="color:var(--text-accent)">Compétences acquises :</span>
 
     • Visualisation et Analyse de Données : Interprétation des données complexes du réseau de métro pour la prise de décision
 
@@ -350,7 +350,7 @@ export const projectsData = {
         "Développé un projet d'exploration de données à partir d'un ensemble de données fourni par la Section Paloise.",
       longDescription: `
 
-        <span style="color:#64ffda">Projet d'Exploration et de Visualisation de Données :</span>
+        <span style="color:var(--text-accent)">Projet d'Exploration et de Visualisation de Données :</span>
 
         • Développé un projet d'exploration de données à partir d'un ensemble de données fourni par la Section Paloise.
 
@@ -366,7 +366,7 @@ export const projectsData = {
 
         • Concentré sur des visualisations claires et concises pour rendre l'analyse accessible et interprétable pour les parties prenantes non techniques.
 
-        💡 <span style="color:#64ffda">Compétences acquises :</span>
+        💡 <span style="color:var(--text-accent)">Compétences acquises :</span>
 
         • Programmation Python pour l'analyse et la visualisation de données
 
@@ -380,7 +380,7 @@ export const projectsData = {
       title: "Projet Personnel d'Analyse de Données Football",
       description:
         "Développé un projet supplémentaire en Python pour soutenir un entretien d'embauche avec Clermont Foot 63.",
-      longDescription: `<span style="color:#64ffda">Projet d'Analyse de Données Clermont Foot 63 :</span>
+      longDescription: `<span style="color:var(--text-accent)">Projet d'Analyse de Données Clermont Foot 63 :</span>
     • Développé un projet supplémentaire en Python pour soutenir un entretien d'embauche avec Clermont Foot 63.
 
     • Collecté et nettoyé les données disponibles au public de la saison 2024/2025 pour analyser les tendances de performance de l'équipe.
@@ -393,7 +393,7 @@ export const projectsData = {
 
     • Souligné que c'était un projet personnel d'apprentissage et d'exploration, sans valeur commerciale.
 
-    💡 <span style="color:#64ffda">Compétences acquises :</span>
+    💡 <span style="color:var(--text-accent)">Compétences acquises :</span>
     • Programmation Python et Matplotlib pour l'analyse et la visualisation de données
 
     • Nettoyage, traitement et analyse exploratoire avancés des données
@@ -408,7 +408,7 @@ export const projectsData = {
       title: "Application Web pour l'analyse de données pour le staff d'entraîneurs football",
       description:
         "Construit un site Web pendant mon temps libre pour le staff d'entraînement de Manchester City pour analyser les données collectées.",
-      longDescription: `<span style="color:#64ffda">Projet de Site Web Manchester City x Hays :</span>
+      longDescription: `<span style="color:var(--text-accent)">Projet de Site Web Manchester City x Hays :</span>
 
     • Construit une application Web pour que le personnel d'entraînement analyse les données collectées.
 
@@ -418,7 +418,7 @@ export const projectsData = {
 
     • Développé avec Flask pour exécuter les scripts Python en temps réel, fournissant des informations tactiques instantanées.
 
-    💡 <span style="color:#64ffda">Compétences acquises :</span>
+    💡 <span style="color:var(--text-accent)">Compétences acquises :</span>
 
     • Analyse de Données : Extraction d'informations exploitables à partir des données brutes de performance
 
@@ -434,7 +434,7 @@ export const projectsData = {
       title: "Détection de tumeur cérébrale à l'aide de CNN",
       description:
         "Développé indépendamment un modèle CNN pour l'imagerie médicale pour la détection de tumeur cérébrale.",
-      longDescription: `<span style="color:#64ffda">Projet de Recherche en Apprentissage Profond – Semestre d'Échange à BK BIET en Inde - Détection de Tumeur Cérébrale :</span>
+      longDescription: `<span style="color:var(--text-accent)">Projet de Recherche en Apprentissage Profond – Semestre d'Échange à BK BIET en Inde - Détection de Tumeur Cérébrale :</span>
 
     • Menée une mission de recherche indépendante sur les applications de l'apprentissage profond en imagerie médicale.
 
@@ -444,7 +444,7 @@ export const projectsData = {
 
     • Exploré et comparé plusieurs techniques d'apprentissage automatique pour améliorer les performances et la robustesse.
 
-    <span style="color:#64ffda">Résultats Clés et Compétences Acquises :</span>
+    <span style="color:var(--text-accent)">Résultats Clés et Compétences Acquises :</span>
 
     • Acquis une expertise forte en Vision par Ordinateur et Apprentissage Profond, avec une compréhension approfondie des architectures CNN.
 

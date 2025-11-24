@@ -2,6 +2,7 @@
 
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
+import { MobileNotice } from "@/components/mobile-notice"
 import { Toaster } from "sonner"
 import { AboutSection } from "@/components/sections/about-section"
 import { ExperienceSection } from "@/components/sections/experience-section"
@@ -19,9 +20,13 @@ export default function Home() {
         @media (max-width: 640px) { .main-container { padding-top: 12vh; } }
       `}</style>
       <div className="min-h-screen main-container" style={{ 
-        backgroundColor: "#0f1419",
-        paddingBottom: "2vh"
+        backgroundColor: "var(--background)",
+        paddingBottom: "2vh",
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '4vh'
       }}>
+        <MobileNotice />
         <Header />
         <Toaster position="bottom-center" richColors />
         <Hero />
