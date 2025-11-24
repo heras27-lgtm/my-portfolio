@@ -2,21 +2,14 @@
 
 import React, { useEffect, useRef, useState } from "react"
 
-interface RevealProps {
+export interface RevealProps {
   children: React.ReactNode
-  /** Optional threshold (portion of element visibility) before revealing */
   threshold?: number
-  /** Delay in ms before marking visible after intersection */
   delay?: number
-  /** Additional className to pass to container */
   className?: string
-  /** If true, only animate first time (no hide on scroll out) */
   once?: boolean
-  /** translateY distance for animation (default: 8vh) */
   translateY?: string
 }
-
-// Basic fade + upward translate. We use inline styles to keep percentage units unaffected.
 export const Reveal: React.FC<RevealProps> = ({
   children,
   threshold = 0.4,
@@ -32,7 +25,6 @@ export const Reveal: React.FC<RevealProps> = ({
   useEffect(() => {
     const el = ref.current
     if (!el) return
-    // Avoid animation for users preferring reduced motion.
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches
     if (prefersReduced) {
       setVisible(true)

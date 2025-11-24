@@ -24,7 +24,7 @@ export function AboutSection() {
           }
         `}</style>
         <div style={{ display: "flex", flexDirection: "column", gap: "2vh" }}>
-          {/* Section Title */}
+          
           <div className="flex items-center" style={{ gap: "2%" }}>
             <h2 className="font-bold" style={{ 
               color: 'var(--text-primary)',
@@ -38,7 +38,7 @@ export function AboutSection() {
             }} />
           </div>
 
-          {/* Content */}
+          
           <div className="grid md:grid-cols-3" style={{ gap: "5%" }}>
             <div className="md:col-span-2" style={{ display: "flex", flexDirection: "column", gap: "1.5vh" }}>
               <p style={{ 
@@ -116,7 +116,7 @@ export function AboutSection() {
               </p>
             </div>
 
-            {/* Image Placeholder */}
+            
             <div className="hidden md:flex items-center justify-center" style={{ height: "100%" }}>
               <div
                 className="rounded border-2 overflow-hidden"

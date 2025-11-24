@@ -8,7 +8,6 @@ import { notFound } from "next/navigation"
 import { useLanguage } from "@/context/LanguageContext"
 import { projectsData } from "@/data/projects-content"
 
-// Type for project slugs
 type ProjectSlug = 
   | "bpce-solutions-informatiques" 
   | "kerdos-energy-chatbot" 
@@ -18,7 +17,6 @@ type ProjectSlug =
   | "hays-manchester-city" 
   | "bk-biet-project"
 
-// Static metadata for projects (tech, links, images, year, role)
 const projectsMetadata: Record<ProjectSlug, { tech: string[], link: string, github: string, image: string, year: string, role: string }> = {
   "bpce-solutions-informatiques": { tech: ["Python", "Multimodal LLMs", "Azure OpenAI", "BLIP-2", "APIs", "LLM"], link: "#", github: "https://github.com/eleejahroudier/BPCEproject", image: "/BPCESI.jpeg", year: "2025", role: "AI Engineer" },
   "kerdos-energy-chatbot": { tech: ["Python", "Hugging Face", "APIs", "Weaviate", "Docker", "Docling"], link: "#", github: "https://github.com/BOupdown/Kerdos", image: "/kerdos.png", year: "2025", role: "AI Engineer" },
@@ -27,11 +25,6 @@ const projectsMetadata: Record<ProjectSlug, { tech: string[], link: string, gith
   "clermont-foot-63": { tech: ["Python", "Data Cleaning", "Data Visualization", "Matplotlib", "Pandas", "NumPy"], link: "#", github: "#", image: "/clermontfoot.png", year: "2024", role: "Data Analyst" },
   "hays-manchester-city": { tech: ["Data Analysis", "Needs understanding", "Dashboards", "Data Visualization"], link: "https://www.youtube.com/watch?v=xkA2I64WxG0", github: "#", image: "/hays.jpeg", year: "2023", role: "Data Analyst" },
   "bk-biet-project": { tech: ["Python", "TensorFlow", "Keras", "Medical Imaging", "CNNs", "PyTorch", "NumPy", "Pandas", "Scikit-learn"], link: "#", github: "#", image: "/BKbiet.jpeg", year: "2024", role: "Research AI Engineer" },
-  // "plane-gps-tracker": { tech: ["Python"], link: "#", github: "#", image: "", year: "2024", role: "Data Engineer" },
-  // "hyperparameter-optimization": { tech: ["Python"], link: "#", github: "#", image: "", year: "2025", role: "AI Engineer" },
-  // "big-data-pipeline": { tech: ["Python"], link: "#", github: "#", image: "", year: "2025", role: "Data Engineer" },
-  // "law-chatbot": { tech: ["Python"], link: "#", github: "#", image: "", year: "2025", role: "AI Engineer" },
-
 }
 
 export default function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -49,8 +42,7 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
   return (
     <>
       <style>{`
-        /* Consistent spacing below fixed header */
-        .project-container { padding-top: 5vh; }
+        .project-container { padding-top: 8vh; }
         @media (max-width: 640px) { .project-container { padding-top: 9.5vh; } }
       `}</style>
       <div
@@ -61,13 +53,13 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
       >
         <Header />
       
-      {/* Project Hero (full width, no surface box) */}
+      
       <section style={{ 
         padding: "clamp(4%, 7%, 10%) clamp(5%, 7%, 10%) clamp(4%, 6%, 10%)",
         backgroundColor: 'transparent'
       }}>
         <div style={{ display: "flex", flexDirection: "column", gap: "2vh" }}>
-          {/* Back Link */}
+          
           <Link
             href="/#projects"
             className="inline-flex items-center font-mono transition-all hover:gap-3"
@@ -82,7 +74,7 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
             {t.projectPage.backToProjects}
           </Link>
 
-          {/* Title */}
+          
           <h1 className="font-bold" style={{ 
             color: 'var(--text-primary)',
             fontSize: "clamp(1.75rem, 4vw, 3.5rem)",
@@ -91,7 +83,7 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
             {projectContent.title}
           </h1>
 
-          {/* Meta Info */}
+          
           <div className="flex flex-wrap" style={{ gap: "3%", marginBottom: "2%" }}>
             <div>
               <span className="font-mono" style={{ color: 'var(--text-secondary)', fontSize: "clamp(0.75rem, 0.9vw, 1rem)" }}>
@@ -105,7 +97,7 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
             </div>
           </div>
 
-          {/* Tech Stack */}
+          
           <div className="flex flex-wrap" style={{ gap: "1%", rowGap: "1vh", marginBottom: "3%" }}>
             {projectMeta.tech.map((tech) => (
               <span
@@ -125,7 +117,7 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
             ))}
           </div>
 
-          {/* Project Image */}
+          
           <div
             className="rounded border overflow-hidden"
             style={{
@@ -146,7 +138,7 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
             />
           </div>
 
-          {/* Description */}
+          
           <div style={{ display: "flex", flexDirection: "column", gap: "2vh" }}>
             <h2 className="font-bold" style={{ 
               color: 'var(--text-primary)',
@@ -165,7 +157,7 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
             />
           </div>
 
-          {/* Links */}
+          
           <div className="flex flex-wrap" style={{ gap: "2%", marginTop: "4%" }}>
             {projectMeta.link !== "#" && (
               <a

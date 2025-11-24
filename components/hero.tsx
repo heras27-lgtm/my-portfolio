@@ -33,7 +33,6 @@ export function Hero() {
         }
       `}</style>
       <div style={{ display: "flex", flexDirection: "column", gap: "1.5vh" }}>
-        {/* Greeting */}
         <div className="flex items-center" style={{ gap: "2%" }}>
           <p className="font-mono" style={{ 
             color: accent,
@@ -43,7 +42,6 @@ export function Hero() {
           </p>
         </div>
 
-        {/* Name */}
         <div>
           <h1 className="font-bold" style={{ 
             color: textPrimary,
@@ -60,7 +58,6 @@ export function Hero() {
           </h2>
         </div>
 
-        {/* Description */}
         <p style={{ 
           color: textBody,
           fontSize: "clamp(0.9rem, 1vw, 1.1rem)",
@@ -73,7 +70,6 @@ export function Hero() {
           <br /> {t.hero.languages}
         </p>
 
-        {/* CTA Button */}
         <div style={{ paddingTop: "2%" }}>
           <a
             href="#about"
@@ -98,7 +94,6 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
       <div className="flex flex-col items-center scroll-indicator" style={{ 
         marginTop: "clamp(3%, 4%, 5%)",
         gap: "2vh"
@@ -136,7 +131,6 @@ export function Hero() {
             .scroll-indicator .scroll-text {
               display: none;
             }
-            /* Keep larger spacing on mobile */
             .scroll-indicator { margin-top: clamp(6%, 8%, 10%) !important; }
           }
         `}</style>
@@ -148,7 +142,6 @@ export function Hero() {
           {t.hero.scroll}
         </p>
         
-        {/* Desktop - Mouse scroll */}
         <div
           className="desktop-scroll border-2 rounded-full flex items-start justify-center"
           style={{ 
@@ -165,7 +158,6 @@ export function Hero() {
           }} />
         </div>
         
-        {/* Mobile - Swipe down arrow */}
         <div className="mobile-scroll flex-col items-center" style={{ gap: "0.5vh" }}>
           <svg 
             width="40" 

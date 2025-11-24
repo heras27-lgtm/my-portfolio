@@ -22,7 +22,6 @@ export function ProjectsSection() {
             }
           }
 
-          /* Distinct, subtle hover for project items */
           .project-card {
             transition: box-shadow 0.5s ease, transform 0.4s ease, background-color 0.4s ease, border-left-width 0.3s ease;
             background-color: transparent;
@@ -42,7 +41,7 @@ export function ProjectsSection() {
           }
         `}</style>
         <div style={{ display: "flex", flexDirection: "column", gap: "2vh"}}>
-          {/* Section Title */}
+          
           <div className="flex items-center" style={{ gap: "2%" }}>
             <h2 className="font-bold" style={{ 
               color: 'var(--text-primary)',
@@ -56,7 +55,7 @@ export function ProjectsSection() {
             }} />
           </div>
 
-          {/* Projects Grid */}
+          
           <div style={{ display: "flex", flexDirection: "column", gap: "3vh"}}>
             {t.projects.list.map((project, index) => (
               <div key={index} className={'border-l-2 transition-all duration-700 ease-out rounded-r project-card'} style={{ 

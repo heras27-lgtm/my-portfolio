@@ -16,7 +16,6 @@ export function Header() {
 
   useEffect(() => setMounted(true), [])
 
-  // Check if we're on a project page
   const isProjectPage = pathname?.startsWith('/projects/')
 
   const navigationItems = [
@@ -37,9 +36,7 @@ export function Header() {
         marginBottom: "0",
       }}
     >
-      {/* Supprimer le margin-bottom sur mobile pour éviter la bande blanche */}
-  <nav className="w-90% mx-auto h-full flex items-center justify-between" style={{ padding: "0 5%" }}>
-        {/* Logo */}
+      <nav className="w-90% mx-auto h-full flex items-center justify-between" style={{ padding: "0 5%" }}>
         <Link href="/">
           <div
             className="border-2 flex items-center justify-center rounded font-bold cursor-pointer hover:opacity-80 transition-opacity aspect-square"
@@ -54,7 +51,6 @@ export function Header() {
           </div>
         </Link>
 
-        {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-2">
           {navigationItems.map((item) => (
             <div
@@ -110,14 +106,12 @@ export function Header() {
             </div>
           ))}
           
-          {/* Separator before language selector */}
           <div style={{ 
             borderLeft: mounted && resolvedTheme === "light" ? "1px solid rgba(200, 107, 60, 0.2)" : "1px solid rgba(100, 255, 218, 0.1)", 
             height: "clamp(2rem, 2.5vw, 2.5rem)",
             marginLeft: "clamp(0.6rem, 1vw, 1rem)"
           }} />
 
-          {/* Language Selector */}
           <div className="flex items-center gap-1 ml-2">
             <button
               onClick={() => setLanguage("en")}
@@ -147,14 +141,12 @@ export function Header() {
             </button>
           </div>
 
-          {/* Separator before theme toggle */}
           <div style={{ 
             borderLeft: mounted && resolvedTheme === "light" ? "1px solid rgba(200, 107, 60, 0.2)" : "1px solid rgba(100, 255, 218, 0.1)", 
             height: "clamp(2rem, 2.5vw, 2.5rem)",
             marginLeft: "clamp(0.6rem, 1vw, 1rem)"
           }} />
 
-          {/* Theme Toggle */}
           <button
             onClick={() => setTheme((resolvedTheme === "light" ? "dark" : "light"))}
             aria-label={mounted ? (resolvedTheme === "light" ? "Activer le mode sombre" : "Activer le mode clair") : "Changer de thème"}
@@ -171,7 +163,6 @@ export function Header() {
           </button>
         </div>
 
-        {/* Mobile controls: theme toggle + hamburger */}
         <div className="md:hidden flex items-center gap-2">
           <button
             onClick={() => setTheme((resolvedTheme === "light" ? "dark" : "light"))}
@@ -195,7 +186,6 @@ export function Header() {
         </div>
       </nav>
 
-      {/* Mobile Navigation */}
       {isOpen && (
         <div
           className="md:hidden border-t border-b"

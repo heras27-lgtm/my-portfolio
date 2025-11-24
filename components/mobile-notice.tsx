@@ -14,12 +14,10 @@ export function MobileNotice() {
   useEffect(() => {
     setMounted(true)
     
-    // Check if we're on mobile and if the notice has been shown before
     const isMobile = window.innerWidth <= 768
     const hasSeenNotice = localStorage.getItem('hasSeenMobileNotice')
     
     if (isMobile && !hasSeenNotice) {
-      // Small delay for better UX
       setTimeout(() => {
         setIsVisible(true)
       }, 500)
@@ -42,7 +40,6 @@ export function MobileNotice() {
 
   return (
     <>
-      {/* Backdrop */}
       <div
         style={{
           position: 'fixed',
@@ -57,7 +54,6 @@ export function MobileNotice() {
         onClick={handleClose}
       />
       
-      {/* Modal */}
       <div
         style={{
           position: 'fixed',
@@ -77,7 +73,6 @@ export function MobileNotice() {
           animation: 'slideIn 0.3s ease-out'
         }}
       >
-        {/* Close button */}
         <button
           onClick={handleClose}
           style={{
@@ -108,7 +103,6 @@ export function MobileNotice() {
           <X size={20} />
         </button>
 
-        {/* Icon */}
         <div style={{ 
           display: 'flex', 
           justifyContent: 'center', 
@@ -130,7 +124,6 @@ export function MobileNotice() {
           </div>
         </div>
 
-        {/* Title */}
         <h3 style={{
           color: textColor,
           fontSize: '1.25rem',
@@ -142,7 +135,6 @@ export function MobileNotice() {
           {t.mobileNotice?.title || "Meilleure expérience sur ordinateur"}
         </h3>
 
-        {/* Message */}
         <p style={{
           color: textSecondary,
           fontSize: '0.95rem',
@@ -154,7 +146,6 @@ export function MobileNotice() {
           {t.mobileNotice?.message || "Pour une expérience optimale et profiter pleinement de toutes les fonctionnalités, nous vous recommandons de visiter ce portfolio sur un ordinateur."}
         </p>
 
-        {/* Button */}
         <button
           onClick={handleClose}
           style={{

@@ -34,7 +34,7 @@ export function ContactSection() {
           gap: "2vh",
           maxWidth: "100%"
         }}>
-          {/* Section Title */}
+          
           <div className="flex items-center" style={{ gap: "2%" }}>
             <h2 className="font-bold" style={{ 
               color: 'var(--text-primary)',
@@ -48,7 +48,7 @@ export function ContactSection() {
             }} />
           </div>
 
-          {/* Contact Section */}
+          
           <div style={{ display: "flex", flexDirection: "column", gap: "1.5vh" }}>
             <p style={{ 
               color: 'var(--text-body)',
@@ -59,10 +59,10 @@ export function ContactSection() {
             </p>
 
 
-            {/* Social / Contact Icons */}
+            
             <div style={{ marginTop: "3%" }}>
               <div className="flex" style={{ gap: "clamp(0.5rem, 1.2%, 1.2rem)", justifyContent: "center", alignItems: "center", flexWrap: "wrap" }}>
-                {/* LinkedIn */}
+                
                 <a
                   href={LINKEDIN_URL}
                   target="_blank"
@@ -85,7 +85,7 @@ export function ContactSection() {
                 >
                   <Linkedin size={"clamp(1rem, 1.4vw, 1.5rem)"} />
                 </a>
-                {/* Instagram */}
+                
                 <a
                   href={INSTAGRAM_URL}
                   target="_blank"
@@ -108,7 +108,7 @@ export function ContactSection() {
                 >
                   <Instagram size={"clamp(1rem, 1.4vw, 1.5rem)"} />
                 </a>
-                {/* Email (copy) */}
+                
                 <button
                   type="button"
                   aria-label="Copy email"
@@ -135,7 +135,7 @@ export function ContactSection() {
                 >
                   <Mail size={"clamp(1rem, 1.4vw, 1.5rem)"} />
                 </button>
-                {/* Phone (copy) */}
+                
                 <button
                   type="button"
                   aria-label="Copy phone number"

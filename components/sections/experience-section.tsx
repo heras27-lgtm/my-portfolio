@@ -21,7 +21,6 @@ export function ExperienceSection() {
             }
           }
           
-          /* Effets de lumière discrets et distincts pour Experience */
           .experience-card {
             position: relative;
             overflow: hidden;
@@ -54,7 +53,7 @@ export function ExperienceSection() {
           }
         `}</style>
         <div style={{ display: "flex", flexDirection: "column", gap: "2vh" }}>
-          {/* Section Title */}
+          
           <div className="flex items-center" style={{ gap: "2%" }}>
             <h2 className="font-bold" style={{ 
               color: 'var(--text-primary)',
@@ -68,7 +67,7 @@ export function ExperienceSection() {
             }} />
           </div>
 
-          {/* Experience Timeline */}
+          
           <div style={{ display: "flex", flexDirection: "column", gap: "clamp(4vh, 6%, 6vh)", textAlign: "justify" }}>
             {t.experience.jobs.map((job, idx) => {
               const companyUrls = [

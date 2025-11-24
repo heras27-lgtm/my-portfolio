@@ -2,7 +2,6 @@ export type Language = "en" | "fr"
 
 export const translations = {
   en: {
-    // Header
     header: {
       about: "About",
       experience: "Experience",
@@ -10,13 +9,11 @@ export const translations = {
       skills: "Skills",
       contact: "Contact",
     },
-    // Mobile Notice
     mobileNotice: {
       title: "Best Viewed on Desktop",
       message: "For an optimal experience and visibility, I recommend viewing this portfolio on a desktop computer.",
       button: "Got it",
     },
-    // Hero Section
     hero: {
       greeting: "Hi, my name is",
       tagline: "Driven by curiosity, powered by data.",
@@ -27,7 +24,6 @@ export const translations = {
       cta: "Learn more about my journey !",
       scroll: "Scroll to explore",
     },
-    // About Section
     about: {
       title: "About",
       intro: "Hello! I'm Alejandro, a data and AI enthusiast based in Pau, France. I'm passionate about unlocking the power of information and transforming data into meaningful insights. I'm fascinated by how information shapes our world and that's exactly why I love working in this field.",
@@ -39,7 +35,6 @@ export const translations = {
       technologies: "Here are a few technologies I've been working with recently:",
       hobbies: "Outside of work, I was a semi-professional handball player for 4 years, enjoy playing in a chess club, and am an avid reader of sociology and psychology books.",
     },
-    // Experience Section
     experience: {
       title: "Experience",
       jobs: [
@@ -80,7 +75,6 @@ export const translations = {
         }
       ]
     },
-    // Projects Section
     projects: {
       title: "Projets",
       viewProject: "View Project",
@@ -129,7 +123,6 @@ export const translations = {
         },
       ]
     },
-    // Skills Section
     skills: {
       title: "Skills",
       categories: [
@@ -159,7 +152,6 @@ export const translations = {
         },
       ]
     },
-    // Contact Section
     contact: {
       title: "Contact",
       message: "I'm always interested in hearing about new projects and opportunities. Whether you have a question or just want to say hi, feel free to reach out!",
@@ -168,7 +160,6 @@ export const translations = {
       phoneCopied: "Phone number copied",
       phoneFailed: "Failed to copy phone number",
     },
-    // Project Page
     projectPage: {
       backToProjects: "Back to Projects",
       overview: "Overview",
@@ -179,7 +170,6 @@ export const translations = {
     }
   },
   fr: {
-    // Header
     header: {
       about: "À propos",
       experience: "Expérience",
@@ -187,13 +177,11 @@ export const translations = {
       skills: "Compétences",
       contact: "Contact",
     },
-    // Mobile Notice
     mobileNotice: {
       title: "Meilleure Expérience sur Ordinateur",
       message: "Pour une expérience optimale et une meilleure visibilité, je vous recommande de visiter ce portfolio sur un ordinateur.",
       button: "J'ai compris",
     },
-    // Hero Section
     hero: {
       greeting: "Bonjour, je m'appelle",
       tagline: "Guidé par la curiosité, alimenté par la data.",
@@ -204,7 +192,6 @@ export const translations = {
       cta: "En savoir plus sur moi !",
       scroll: "Faites défiler pour explorer",
     },
-    // About Section
     about: {
       title: "À propos",
       intro: "Bonjour ! Je suis Alejandro, un passionné de Data et d'IA basé à Pau, en France. Je suis motivé par l'exploitation de la puissance de l'information et la transformation de la Data en connaissances significatives. Je suis fasciné par la façon dont l'information peut façonner une prise de décision de différentes manières et c'est exactement pourquoi j'adore ce domaine.",
@@ -216,7 +203,6 @@ export const translations = {
       technologies: "Voici quelques technologies avec lesquelles j'ai récemment travaillé :",
       hobbies: "En dehors du travail, j'ai été joueur de handball semi-professionnel pendant 4 ans, je suis joueur d'échecs en club et je suis un lecteur passionné de livres en sociologie et psychologie.",
     },
-    // Experience Section
     experience: {
       title: "Expérience",
       jobs: [
@@ -257,7 +243,6 @@ export const translations = {
         }
       ]
     },
-    // Projects Section
     projects: {
       title: "Projets",
       viewProject: "Voir le Projet",
@@ -306,7 +291,6 @@ export const translations = {
         },
       ]
     },
-    // Skills Section
     skills: {
       title: "Compétences",
       categories: [
@@ -336,7 +320,6 @@ export const translations = {
         },
       ]
     },
-    // Contact Section
     contact: {
       title: "Contact",
       message: "Je suis toujours intéressé pour parler de nouveaux projets et opportunités. Que vous ayez une question ou que vous vouliez juste dire bonjour, n'hésitez pas à me contacter !",
@@ -345,7 +328,6 @@ export const translations = {
       phoneCopied: "Numéro de téléphone copié",
       phoneFailed: "Échec de la copie du numéro de téléphone",
     },
-    // Project Page
     projectPage: {
       backToProjects: "Retour aux Projets",
       overview: "Aperçu",

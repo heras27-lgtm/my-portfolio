@@ -21,7 +21,6 @@ export function SkillsSection() {
             }
           }
 
-          /* Subtle, distinct hover for skills cards */
           .skills-card {
             transition: background 0.5s ease, box-shadow 0.5s ease, transform 0.4s ease;
             box-shadow: var(--surface-shadow);
@@ -33,14 +32,13 @@ export function SkillsSection() {
             box-shadow: inset 0 0 0 1px var(--chip-border), 0 0 10px -6px var(--chip-border);
             transform: translateY(-1px);
           }
-          /* Slightly different glow intensity in light mode */
           .light .skills-card:hover,
           .light .skills-card:active {
             box-shadow: inset 0 0 0 1px rgba(200,107,60,0.25), 0 0 10px -6px rgba(200,107,60,0.18);
           }
         `}</style>
         <div style={{ display: "flex", flexDirection: "column", gap: "2vh" }}>
-          {/* Section Title */}
+          
           <div className="flex items-center" style={{ gap: "2%" }}>
             <h2 className="font-bold" style={{ 
               color: 'var(--text-primary)',
@@ -54,7 +52,7 @@ export function SkillsSection() {
             }} />
           </div>
 
-          {/* Skills Grid */}
+          
           <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: "clamp(3vh, 5%, 5vh) clamp(3vh, 5%, 5vh)" }}>
             {t.skills.categories.map((category, index) => (
               <div

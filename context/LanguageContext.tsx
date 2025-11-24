@@ -16,7 +16,6 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    // Get saved language from localStorage
     const savedLanguage = (localStorage.getItem("language") || "en") as Language
     setLanguageState(savedLanguage)
     setMounted(true)
@@ -27,7 +26,6 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     localStorage.setItem("language", lang)
   }
 
-  // Provide a default value during SSR
   const contextValue: LanguageContextType = {
     language,
     setLanguage,
@@ -44,7 +42,6 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 export function useLanguage() {
   const context = useContext(LanguageContext)
   if (context === undefined) {
-    // During SSR, return default English translations
     return {
       language: "en" as Language,
       setLanguage: () => {},
