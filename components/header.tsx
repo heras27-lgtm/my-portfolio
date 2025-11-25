@@ -36,8 +36,8 @@ export function Header() {
         marginBottom: "0",
       }}
     >
-      <nav className="w-90% mx-auto h-full flex items-center justify-between" style={{ padding: "0 5%" }}>
-        <Link href="/">
+      <nav className="w-90% mx-auto h-full flex items-center justify-between header-nav" style={{ paddingLeft: "5%", paddingRight: "5%" }}>
+        <Link href="/" className="flex items-center">
           <div
             className="border-2 flex items-center justify-center rounded font-bold cursor-pointer hover:opacity-80 transition-opacity aspect-square"
             style={{ 
@@ -172,15 +172,15 @@ export function Header() {
               color: mounted && resolvedTheme === "light" ? "#C86B3C" : "#64ffda",
               border: mounted && resolvedTheme === "light" ? "1px solid rgba(200, 107, 60, 0.3)" : "1px solid rgba(100, 255, 218, 0.3)",
               boxSizing: "border-box",
-              padding: "6px",
-              width: "52px",
-              height: "52px"
+              padding: "0",
+              width: "clamp(2.5rem, 3vw, 3.5rem)",
+              height: "clamp(2.5rem, 3vw, 3.5rem)"
             }}
             title={mounted ? (resolvedTheme === "light" ? "Dark mode" : "Light mode") : "Toggle theme"}
           >
             {mounted && resolvedTheme === "light" ? <Moon size={18} /> : <Sun size={18} />}
           </button>
-          <button className="flex items-center justify-center" aria-label="Open menu" onClick={() => setIsOpen(!isOpen)} style={{ color: mounted && resolvedTheme === "light" ? "#C86B3C" : "#64ffda", fontSize: "clamp(1.8rem, 8vw, 2.6rem)", lineHeight: 1, padding: "0.25rem 0.5rem", minWidth: "44px", minHeight: "44px", cursor: "pointer" }}>
+          <button className="flex items-center justify-center" aria-label="Open menu" onClick={() => setIsOpen(!isOpen)} style={{ color: mounted && resolvedTheme === "light" ? "#C86B3C" : "#64ffda", fontSize: "clamp(1.8rem, 8vw, 2.6rem)", lineHeight: 1, padding: "0", width: "clamp(2.5rem, 3vw, 3.5rem)", height: "clamp(2.5rem, 3vw, 3.5rem)", cursor: "pointer" }}>
             ☰
           </button>
         </div>

@@ -242,3 +242,11 @@ section[id] {
     scroll-margin-top: 3vh; /* Mobile: less space needed */
   }
 }
+
+/* Header nav mobile padding */
+@media (max-width: 768px) {
+  .header-nav {
+    padding-top: 100rem !important;
+    padding-bottom: 1rem !important;
+  }
+}

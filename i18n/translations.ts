@@ -39,6 +39,13 @@ export const translations = {
       experience: "I have gained over a year of professional experience, including my role as a Data Engineer Intern at Groupe Coopératif Vivadour and as an AI Analyst Intern at Airbus.",
       technologies: "Here are a few technologies I've been working with recently:",
       hobbies: "Outside of work, I was a semi-professional handball player for 4 years, enjoy playing in a chess club, and am an avid reader of sociology and psychology books.",
+      hobbiesTitle: "Hobbies & Interests",
+      hobby1Title: "Handball",
+      hobby1Desc: "Semi-pro player for 4 years",
+      hobby2Title: "Chess",
+      hobby2Desc: "Active club member",
+      hobby3Title: "Reading",
+      hobby3Desc: "Sociology & Psychology enthusiast",
       mobile: {
         intro: "Data and AI enthusiast based in Pau, France. Passionate about transforming data into meaningful insights.",
         summary: "Native Spanish & French speaker, C1 English. Master's in AI from CY Tech. 1+ year experience at Airbus and Vivadour.",
@@ -234,6 +241,8 @@ export const translations = {
       }
     },
     learnMore: "View website",
+    readMore: "Read more",
+    readLess: "Read less",
     projectPage: {
       backToProjects: "Back to Projects",
       overview: "Overview",
@@ -281,6 +290,13 @@ export const translations = {
       experience: "J'ai accumulé plus d'un an d'expérience professionnelle, notamment en tant que stagiaire Data Engineer chez Groupe Coopératif Vivadour et stagiaire IA Analyst chez Airbus.",
       technologies: "Voici quelques technologies avec lesquelles j'ai récemment travaillé :",
       hobbies: "En dehors du travail, j'ai été joueur de handball semi-professionnel pendant 4 ans, je suis joueur d'échecs en club et je suis un lecteur passionné de livres en sociologie et psychologie.",
+      hobbiesTitle: "Hobbies & Centres d'intérêt",
+      hobby1Title: "Handball",
+      hobby1Desc: "Joueur semi-pro pendant 4 ans",
+      hobby2Title: "Échecs",
+      hobby2Desc: "Membre actif de club",
+      hobby3Title: "Lecture",
+      hobby3Desc: "Passionné de sociologie et psychologie",
       mobile: {
         intro: "Passionné de data et d'IA basé à Pau, France. Motivé par la transformation de la data en connaissances significatives.",
         summary: "Espagnol et français natifs, anglais C1. Master en IA de CY Tech. 1+ an d'expérience chez Airbus et Vivadour.",
@@ -476,6 +492,8 @@ export const translations = {
       }
     },
     learnMore: "Visiter le site web",
+    readMore: "Lire plus",
+    readLess: "Lire moins",
     projectPage: {
       backToProjects: "Retour aux Projets",
       overview: "Aperçu",
