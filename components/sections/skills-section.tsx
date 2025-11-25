@@ -9,6 +9,7 @@ export function SkillsSection() {
   const [selectedCategory, setSelectedCategory] = useState<number | null>(null)
   const [isClient, setIsClient] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
+  const [expandedMobileCategory, setExpandedMobileCategory] = useState<number | null>(null)
 
   const categoryIcons = ['💻', '🎨', '📐', '📊', '🤖', '⚙️']
   const categoryColors = [
@@ -28,14 +29,11 @@ export function SkillsSection() {
     'linear-gradient(135deg, rgba(74, 222, 128, 0.25), rgba(34, 197, 94, 0.15))'
   ]
 
-  // Detect client and viewport size to avoid rendering the section on mobile.
   useEffect(() => {
     setIsClient(true)
     const mq = window.matchMedia('(max-width: 768px)')
     const handle = (e: MediaQueryListEvent | MediaQueryList) => setIsMobile(e.matches)
-    // Initial value
     setIsMobile(mq.matches)
-    // Listen for changes
     if (mq.addEventListener) mq.addEventListener('change', handle as any)
     else mq.addListener(handle as any)
     return () => {
@@ -44,10 +42,9 @@ export function SkillsSection() {
     }
   }, [])
 
+  if (!isClient) return null
+
   return (
-    // Don't render anything until we're on the client; then skip rendering entirely on mobile.
-    // This ensures the skills section's DOM is not present on telephone devices.
-    (!isClient || isMobile) ? null : (
     <section id="skills" style={{ overflowX: "hidden", overflowY: "visible" }}>
       <Reveal translateY="2vh" threshold={0.1}>
       <main style={{ 
@@ -56,17 +53,17 @@ export function SkillsSection() {
         margin: "0 auto"
       }}>
         <style>{`
-          /* Hide the whole skills section on small screens (mobile) to avoid
-             header overlap and interaction issues. Desktop remains unchanged. */
-          @media (max-width: 768px) {
-            #skills {
-              display: none !important;
-            }
+          /* Mobile: Simple grid layout */
+          .mobile-skills-grid {
+            display: none;
           }
 
-          @media (max-width: 640px) {
-            #skills {
-              margin-bottom: 7vh !important;
+          @media (max-width: 768px) {
+            .hexagon-container {
+              display: none !important;
+            }
+            .mobile-skills-grid {
+              display: block !important;
             }
           }
 
@@ -372,57 +369,88 @@ export function SkillsSection() {
             }
           }
 
-          @media (max-width: 768px) {
-            main {
-              padding: 2% 5% 1vh !important;
-            }
-            .main-hexagon-wrapper {
-              gap: 15px;
-              padding: 10px 0 5px !important;
-            }
-            .main-hexagon-wrapper.zoomed {
-              padding-bottom: 0 !important;
-            }
-            .main-hexagon {
-              width: 130px;
-              height: 150px;
-            }
-            .category-hexagon {
-              width: 120px;
-              height: 138px;
-            }
-            .hex-icon {
-              font-size: 1.8rem;
-            }
-            .hex-title {
-              font-size: 0.75rem;
-            }
-            .skill-hexagon {
-              width: 110px;
-              height: 127px;
-            }
-            .skill-text {
-              font-size: 0.75rem;
-            }
-            .expanded-hexagons {
-              gap: 15px;
-              padding: 0;
-            }
-            .expanded-title {
-              margin-bottom: 40px !important;
-              /* Reduce the large negative top margin on small screens to avoid
-                 overlapping the fixed header and intercepting clicks. */
-              margin-top: -40px !important;
-              font-size: clamp(1.2rem, 5vw, 1.8rem) !important;
-            }
-            .back-button {
-              margin-top: 30px !important;
-              padding: 10px 25px !important;
-              font-size: 0.9rem !important;
-            }
-            .flex.items-center {
-              margin-bottom: 5vh !important;
-            }
+          /* Mobile grid styles */
+          .mobile-category {
+            margin-bottom: 30px;
+          }
+
+          .mobile-category-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            padding: 12px 15px;
+            background: linear-gradient(135deg, var(--surface-subtle), var(--surface-hover));
+            border-radius: 12px;
+            border: 1px solid var(--surface-border);
+            cursor: pointer;
+            transition: all 0.3s ease;
+          }
+
+          .mobile-category-header:active {
+            transform: scale(0.98);
+            border-color: var(--text-accent);
+          }
+
+          .mobile-category-header-content {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+
+          .mobile-category-chevron {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+            color: var(--text-accent);
+          }
+
+          .mobile-category-chevron.expanded {
+            transform: rotate(180deg);
+          }
+
+          .mobile-category-icon {
+            font-size: 1.5rem;
+          }
+
+          .mobile-category-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+          }
+
+          .mobile-skills-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 10px;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: all 0.4s ease;
+            margin-top: 0;
+          }
+
+          .mobile-skills-list.expanded {
+            max-height: 1000px;
+            opacity: 1;
+            margin-top: 15px;
+          }
+
+          .mobile-skill-card {
+            background: linear-gradient(135deg, var(--surface-hover), var(--surface-subtle));
+            border: 1px solid var(--chip-border);
+            border-radius: 8px;
+            padding: 12px;
+            text-align: center;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-body);
+            transition: all 0.3s ease;
+          }
+
+          .mobile-skill-card:active {
+            transform: scale(0.95);
+            border-color: var(--text-accent);
+            box-shadow: 0 0 15px rgba(200, 107, 60, 0.3);
           }
         `}</style>
         <div style={{ display: "flex", flexDirection: "column" }}>
@@ -440,7 +468,35 @@ export function SkillsSection() {
             }} />
           </div>
 
-          {/* Category Hexagons */}
+          {/* Mobile Grid View */}
+          <div className="mobile-skills-grid">
+            {t.skills.categories.map((category, index) => (
+              <div key={index} className="mobile-category">
+                <div 
+                  className="mobile-category-header" 
+                  style={{ background: categoryBgColors[index] }}
+                  onClick={() => setExpandedMobileCategory(expandedMobileCategory === index ? null : index)}
+                >
+                  <div className="mobile-category-header-content">
+                    <span className="mobile-category-icon">{categoryIcons[index]}</span>
+                    <span className="mobile-category-title">{category.category}</span>
+                  </div>
+                  <span className={`mobile-category-chevron ${expandedMobileCategory === index ? 'expanded' : ''}`}>
+                    ▼
+                  </span>
+                </div>
+                <div className={`mobile-skills-list ${expandedMobileCategory === index ? 'expanded' : ''}`}>
+                  {category.skills.map((skill) => (
+                    <div key={skill} className="mobile-skill-card">
+                      {skill}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Desktop: Category Hexagons */}
           <div className={`hexagon-container ${selectedCategory !== null ? 'expanded' : ''}`}>
             <div className={`main-hexagon-wrapper ${selectedCategory !== null ? 'zoomed' : ''}`}>
               {t.skills.categories.map((category, index) => (
@@ -501,6 +557,5 @@ export function SkillsSection() {
       </main>
       </Reveal>
     </section>
-    )
   )
 }
