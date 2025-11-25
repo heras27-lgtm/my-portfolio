@@ -2,11 +2,13 @@
 
 import { useLanguage } from "@/context/LanguageContext"
 import { Reveal } from "@/components/reveal"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 export function SkillsSection() {
   const { t } = useLanguage()
   const [selectedCategory, setSelectedCategory] = useState<number | null>(null)
+  const [isClient, setIsClient] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
 
   const categoryIcons = ['💻', '🎨', '📐', '📊', '🤖', '⚙️']
   const categoryColors = [
@@ -26,7 +28,26 @@ export function SkillsSection() {
     'linear-gradient(135deg, rgba(74, 222, 128, 0.25), rgba(34, 197, 94, 0.15))'
   ]
 
+  // Detect client and viewport size to avoid rendering the section on mobile.
+  useEffect(() => {
+    setIsClient(true)
+    const mq = window.matchMedia('(max-width: 768px)')
+    const handle = (e: MediaQueryListEvent | MediaQueryList) => setIsMobile(e.matches)
+    // Initial value
+    setIsMobile(mq.matches)
+    // Listen for changes
+    if (mq.addEventListener) mq.addEventListener('change', handle as any)
+    else mq.addListener(handle as any)
+    return () => {
+      if (mq.removeEventListener) mq.removeEventListener('change', handle as any)
+      else mq.removeListener(handle as any)
+    }
+  }, [])
+
   return (
+    // Don't render anything until we're on the client; then skip rendering entirely on mobile.
+    // This ensures the skills section's DOM is not present on telephone devices.
+    (!isClient || isMobile) ? null : (
     <section id="skills" style={{ overflowX: "hidden", overflowY: "visible" }}>
       <Reveal translateY="2vh" threshold={0.1}>
       <main style={{ 
@@ -35,6 +56,14 @@ export function SkillsSection() {
         margin: "0 auto"
       }}>
         <style>{`
+          /* Hide the whole skills section on small screens (mobile) to avoid
+             header overlap and interaction issues. Desktop remains unchanged. */
+          @media (max-width: 768px) {
+            #skills {
+              display: none !important;
+            }
+          }
+
           @media (max-width: 640px) {
             #skills {
               margin-bottom: 7vh !important;
@@ -275,7 +304,9 @@ export function SkillsSection() {
 
           .back-button {
             background: var(--text-accent);
-            color: white;
+            /* Use the page background color for the button text to increase
+               contrast against the accent background in both themes */
+            color: var(--background);
             border: none;
             padding: 12px 30px;
             border-radius: 25px;
@@ -286,8 +317,13 @@ export function SkillsSection() {
             align-items: center;
             gap: 10px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            /* Ensure the glow is visible and not clipped by parent containers */
+            position: relative;
+            z-index: 50;
+            overflow: visible;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
             margin-top: 60px;
+            margin-bottom: 18px;
           }
 
           .back-button:hover {
@@ -374,7 +410,9 @@ export function SkillsSection() {
             }
             .expanded-title {
               margin-bottom: 40px !important;
-              margin-top: -400px !important;
+              /* Reduce the large negative top margin on small screens to avoid
+                 overlapping the fixed header and intercepting clicks. */
+              margin-top: -40px !important;
               font-size: clamp(1.2rem, 5vw, 1.8rem) !important;
             }
             .back-button {
@@ -463,5 +501,6 @@ export function SkillsSection() {
       </main>
       </Reveal>
     </section>
+    )
   )
 }

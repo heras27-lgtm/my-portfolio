@@ -29,14 +29,14 @@ export function MobileNotice() {
     localStorage.setItem('hasSeenMobileNotice', 'true')
   }
 
-  if (!isVisible || !mounted) return null
-
   const accent = resolvedTheme === "light" ? "#C86B3C" : "#64ffda"
   const bgColor = resolvedTheme === "light" 
     ? "oklch(0.99 0.008 45)" 
     : "oklch(0.145 0 0)"
   const textColor = resolvedTheme === "light" ? "#2D1B0E" : "#ccd6f6"
   const textSecondary = resolvedTheme === "light" ? "#6B5344" : "#8892b0"
+
+  if (!isVisible || !mounted) return null
 
   return (
     <>
