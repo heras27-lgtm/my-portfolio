@@ -4,9 +4,19 @@ import { useLanguage } from "@/context/LanguageContext"
 import { Reveal } from "@/components/reveal"
 import Image from "next/image"
 
+import { useEffect, useState } from "react"
+
 export function AboutSection() {
   const { t } = useLanguage()
   const PROFILE_IMAGE = "/IMG_2889.jpg"
+  const [isMobile, setIsMobile] = useState(false)
+  
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768)
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
 
   return (
     <section id="about" style={{ overflow: "hidden" }}>
@@ -41,51 +51,74 @@ export function AboutSection() {
           
           <div className="grid md:grid-cols-3" style={{ gap: "5%" }}>
             <div className="md:col-span-2" style={{ display: "flex", flexDirection: "column", gap: "1.5vh" }}>
-              <p style={{ 
-                color: 'var(--text-body)',
-                fontSize: "clamp(0.9rem, 1vw, 1.1rem)",
-                lineHeight: "1.6",
-                textAlign: "justify"
-              }}>
-                {t.about.intro}
-              </p>
+              {isMobile && t.about.mobile ? (
+                <>
+                  <p style={{ 
+                    color: 'var(--text-body)',
+                    fontSize: "clamp(0.9rem, 1vw, 1.1rem)",
+                    lineHeight: "1.6",
+                    textAlign: "justify"
+                  }}>
+                    {t.about.mobile.intro}
+                  </p>
+                  <p style={{ 
+                    color: 'var(--text-body)',
+                    fontSize: "clamp(0.9rem, 1vw, 1.1rem)",
+                    lineHeight: "1.6",
+                    textAlign: "justify"
+                  }}>
+                    {t.about.mobile.summary}
+                  </p>
+                </>
+              ) : (
+                <>
+                  <p style={{ 
+                    color: 'var(--text-body)',
+                    fontSize: "clamp(0.9rem, 1vw, 1.1rem)",
+                    lineHeight: "1.6",
+                    textAlign: "justify"
+                  }}>
+                    {t.about.intro}
+                  </p>
 
-              <p style={{ 
-                color: 'var(--text-body)',
-                fontSize: "clamp(0.9rem, 1vw, 1.1rem)",
-                lineHeight: "1.6",
-                textAlign: "justify"
-              }}>
-                {t.about.languages}
-                <br /> {t.about.motivated}
-              </p>
+                  <p style={{ 
+                    color: 'var(--text-body)',
+                    fontSize: "clamp(0.9rem, 1vw, 1.1rem)",
+                    lineHeight: "1.6",
+                    textAlign: "justify"
+                  }}>
+                    {t.about.languages}
+                    <br /> {t.about.motivated}
+                  </p>
 
-              <p style={{ 
-                color: 'var(--text-body)',
-                fontSize: "clamp(0.9rem, 1vw, 1.1rem)",
-                lineHeight: "1.6",
-                textAlign: "justify"
-              }}>
-                {t.about.degree}
-              </p>
+                  <p style={{ 
+                    color: 'var(--text-body)',
+                    fontSize: "clamp(0.9rem, 1vw, 1.1rem)",
+                    lineHeight: "1.6",
+                    textAlign: "justify"
+                  }}>
+                    {t.about.degree}
+                  </p>
 
-              <p style={{ 
-                color: 'var(--text-body)',
-                fontSize: "clamp(0.9rem, 1vw, 1.1rem)",
-                lineHeight: "1.6",
-                textAlign: "justify"
-              }}>
-                {t.about.exchange}
-              </p>
+                  <p style={{ 
+                    color: 'var(--text-body)',
+                    fontSize: "clamp(0.9rem, 1vw, 1.1rem)",
+                    lineHeight: "1.6",
+                    textAlign: "justify"
+                  }}>
+                    {t.about.exchange}
+                  </p>
 
-               <p style={{ 
-                color: 'var(--text-body)',
-                fontSize: "clamp(0.9rem, 1vw, 1.1rem)",
-                lineHeight: "1.6",
-                textAlign: "justify"
-              }}>
-                {t.about.experience}
-              </p>
+                   <p style={{ 
+                    color: 'var(--text-body)',
+                    fontSize: "clamp(0.9rem, 1vw, 1.1rem)",
+                    lineHeight: "1.6",
+                    textAlign: "justify"
+                  }}>
+                    {t.about.experience}
+                  </p>
+                </>
+              )}
 
               <p style={{ 
                 color: 'var(--text-body)',
@@ -112,7 +145,7 @@ export function AboutSection() {
                   lineHeight: "1.6",
                   textAlign: "justify"
                 }}>
-                  {t.about.hobbies}
+                  {isMobile && t.about.mobile?.hobbies ? t.about.mobile.hobbies : t.about.hobbies}
               </p>
             </div>
 

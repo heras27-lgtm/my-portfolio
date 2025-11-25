@@ -8,7 +8,15 @@ export function Hero() {
   const { t } = useLanguage()
   const { resolvedTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
-  useEffect(() => setMounted(true), [])
+  const [isMobile, setIsMobile] = useState(false)
+  
+  useEffect(() => {
+    setMounted(true)
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768)
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
 
   const accent = 'var(--text-accent)'
   const textPrimary = 'var(--text-primary)'
@@ -64,10 +72,10 @@ export function Hero() {
           width: "min(100%, 80%)",
           lineHeight: "1.6"
         }}>
-          {t.hero.description}{" "}
+          {isMobile && t.hero.mobile?.description ? t.hero.mobile.description : t.hero.description}{" "}
           <span className="font-semibold" style={{ color: accent }}>{t.hero.role}</span>.
-          <br /> {t.hero.experience}
-          <br /> {t.hero.languages}
+          <br /> {isMobile && t.hero.mobile ? t.hero.mobile.experience : t.hero.experience}
+          <br /> {isMobile && t.hero.mobile ? t.hero.mobile.languages : t.hero.languages}
         </p>
 
         <div style={{ paddingTop: "2%" }}>
@@ -131,7 +139,7 @@ export function Hero() {
             .scroll-indicator .scroll-text {
               display: none;
             }
-            .scroll-indicator { margin-top: clamp(6%, 8%, 10%) !important; }
+            .scroll-indicator { margin-top: clamp(10%, 12%, 15%) !important; }
           }
         `}</style>
         

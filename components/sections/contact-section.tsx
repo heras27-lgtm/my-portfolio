@@ -5,8 +5,18 @@ import { Reveal } from "@/components/reveal"
 import { Linkedin, Instagram, Mail, Phone } from "lucide-react"
 import { toast } from "sonner"
 
+import { useEffect, useState } from "react"
+
 export function ContactSection() {
   const { t } = useLanguage()
+  const [isMobile, setIsMobile] = useState(false)
+  
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768)
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
 
   const LINKEDIN_URL = "https://www.linkedin.com/in/alejandro-heras-espinosa/";
   const INSTAGRAM_URL = "https://www.instagram.com/alexandreheras/";
@@ -55,7 +65,7 @@ export function ContactSection() {
               fontSize: "clamp(0.875rem, 1vw, 1.1rem)",
               lineHeight: "1.6"
             }}>
-              {t.contact.message}
+              {isMobile && t.contact.mobile ? t.contact.mobile.message : t.contact.message}
             </p>
 
 
