@@ -177,7 +177,7 @@ export const projectsData = {
     "hays-manchester-city": {
       title: "Web application for football coaching staff to analyze data",
       description:
-        "Built a website during my personal time for Manchester City coaching staff to analyze data collected.",
+        "Built a web application during my personal time for Manchester City coaching staff to analyze data collected.",
       longDescription: `<span style="color:var(--text-accent)">Manchester City x Hays Website Project:</span>
 
     • Built a web application for coaching staff to analyze data collected.
@@ -222,7 +222,7 @@ export const projectsData = {
 
     • Strengthened statistical analysis, data preprocessing, visualization, and data structures expertise.
 
-    • Gained a deep understanding of model evaluation metrics (accuracy, precision, recall, F1, etc.) and how to apply them effectively and wisely to assess and improve models.
+    • Gained a deep understanding of model evaluation metrics (accuracy, precision, recall, F1-score, etc.) and how to apply them effectively to assess and improve models.
 
     • Enhanced ability to communicate fluently in English while gaining international experience and extending open-mindedness in a new cultural environment.
 
@@ -412,7 +412,7 @@ export const projectsData = {
 
     • Construit une application Web pour que le personnel d'entraînement analyse les données collectées.
 
-    • Activé la prise de décision basée sur les données grâce aux analyses de performance et aux tableaux de bord interactifs.
+    • Permis la prise de décision basée sur les données grâce aux analyses de performance et aux tableaux de bord interactifs.
 
     • Visualisé les métriques clés en utilisant des cartes thermiques, des diagrammes de passe et d'autres tracés avec Matplotlib.
 
@@ -436,13 +436,13 @@ export const projectsData = {
         "Développé indépendamment un modèle CNN pour l'imagerie médicale pour la détection de tumeur cérébrale.",
       longDescription: `<span style="color:var(--text-accent)">Projet de Recherche en Apprentissage Profond – Semestre d'Échange à BK BIET en Inde - Détection de Tumeur Cérébrale :</span>
 
-    • Menée une mission de recherche indépendante sur les applications de l'apprentissage profond en imagerie médicale.
+    • Mené une mission de recherche indépendante sur les applications de l'apprentissage profond en imagerie médicale.
 
-    • Architecturé un modèle de détection de tumeur cérébrale basé sur CNN utilisant ResNet50, atteignant une précision de 92% grâce à un prétraitement avancé des données et une analyse statistique.
+    • Conçu un modèle de détection de tumeur cérébrale basé sur CNN utilisant ResNet50, atteignant une précision de 92% grâce à un prétraitement avancé des données et une analyse statistique.
 
     • Développé le modèle en Python avec PyTorch, NumPy, Pandas et Scikit-learn ; implémenté les pipelines de classification d'images dans Jupyter Notebook/Anaconda et maintenu le code via GitHub.
 
-    • Exploré et comparé plusieurs techniques d'apprentissage automatique pour améliorer les performances et la robustesse.
+    • Exploré et comparé plusieurs techniques d'apprentissage automatique pour améliorer la performance et la robustesse du modèle.
 
     <span style="color:var(--text-accent)">Résultats Clés et Compétences Acquises :</span>
 
@@ -454,7 +454,7 @@ export const projectsData = {
 
     • Acquis une compréhension approfondie des métriques d'évaluation de modèle (précision, précision, rappel, F1, etc.) et comment les appliquer efficacement et judicieusement pour évaluer et améliorer les modèles.
 
-    • Amélioration de la capacité à communiquer couramment en anglais tout en acquérant une expérience internationale et en élargissant l'ouverture d'esprit dans un nouvel environnement culturel.
+    • Amélioré la capacité à communiquer couramment en anglais tout en acquérant une expérience internationale et en élargissant l'ouverture d'esprit dans un nouvel environnement culturel.
 
     • Construit des connaissances supplémentaires en cryptographie et en bases du hacking éthique.`,
     },
