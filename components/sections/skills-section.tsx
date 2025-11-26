@@ -11,14 +11,15 @@ export function SkillsSection() {
   const [isMobile, setIsMobile] = useState(false)
   const [expandedMobileCategory, setExpandedMobileCategory] = useState<number | null>(null)
 
-  const categoryIcons = ['💻', '🎨', '📐', '📊', '🤖', '⚙️']
+  const categoryIcons = ['💻', '🎨', '📐', '📊', '🤖', '⚙️', '💼']
   const categoryColors = [
     'rgba(100, 200, 255, 0.15)',
     'rgba(255, 150, 100, 0.15)',
     'rgba(236, 72, 153, 0.2)',
     'rgba(59, 130, 246, 0.2)',
     'rgba(138, 43, 226, 0.2)',
-    'rgba(34, 197, 94, 0.2)'
+    'rgba(34, 197, 94, 0.2)',
+    'rgba(255, 205, 86, 0.18)'
   ]
   const categoryBgColors = [
     'linear-gradient(135deg, rgba(100, 200, 255, 0.15), rgba(59, 130, 246, 0.1))',
@@ -26,8 +27,10 @@ export function SkillsSection() {
     'linear-gradient(135deg, rgba(236, 72, 153, 0.25), rgba(219, 39, 119, 0.15))',
     'linear-gradient(135deg, rgba(59, 130, 246, 0.25), rgba(37, 99, 235, 0.15))',
     'linear-gradient(135deg, rgba(168, 85, 247, 0.25), rgba(138, 43, 226, 0.15))',
-    'linear-gradient(135deg, rgba(74, 222, 128, 0.25), rgba(34, 197, 94, 0.15))'
+    'linear-gradient(135deg, rgba(74, 222, 128, 0.25), rgba(34, 197, 94, 0.15))',
+    'linear-gradient(135deg, rgba(255,205,86,0.18), rgba(245,158,11,0.08))'
   ]
+
 
   useEffect(() => {
     setIsClient(true)
@@ -144,6 +147,10 @@ export function SkillsSection() {
 
           .category-hexagon:nth-child(6) {
             transform: translateY(35px);
+          }
+
+          .category-hexagon:nth-child(7) {
+            transform: translateY(15px);
           }
 
           .category-hexagon:hover {

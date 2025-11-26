@@ -227,6 +227,18 @@ export const translations = {
           category: "Tools & Platforms",
           skills: ["Hugging Face", "GitHub", "Docker", "AWS", "Jira", "SQL Server", "MongoDB", "PostgreSQL"],
         },
+        {
+          category: "Business",
+          skills: [
+            "Recurring costs",
+            "Non-recurring costs",
+            "ROI",
+            "TCO",
+            "Cost-benefit analysis",
+            "Stakeholder analysis",
+            "Pricing",
+          ],
+        },
       ]
     },
     contact: {
@@ -477,6 +489,18 @@ export const translations = {
         {
           category: "Outils & Plateformes",
           skills: ["Hugging Face", "GitHub", "Docker", "AWS", "Jira", "SQL Server", "MongoDB", "PostgreSQL"],
+        },
+        {
+          category: "Business",
+          skills: [
+            "Coûts récurrents",
+            "Coûts non récurrents",
+            "ROI",
+            "Coût total de possession (TCO)",
+            "Analyse coût-bénéfice",
+            "Analyse des parties prenantes",
+            "Tarification",
+          ],
         },
       ]
     },
