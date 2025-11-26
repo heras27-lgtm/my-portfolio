@@ -10,6 +10,7 @@ export function SkillsSection() {
   const [isClient, setIsClient] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
   const [expandedMobileCategory, setExpandedMobileCategory] = useState<number | null>(null)
+  const [showClickHint, setShowClickHint] = useState(true)
 
   const categoryIcons = ['💻', '🎨', '📐', '📊', '🤖', '⚙️', '💼']
   const categoryColors = [
@@ -35,8 +36,12 @@ export function SkillsSection() {
   useEffect(() => {
     setIsClient(true)
     const mq = window.matchMedia('(max-width: 768px)')
-    const handle = (e: MediaQueryListEvent | MediaQueryList) => setIsMobile(e.matches)
+    const handle = (e: MediaQueryListEvent | MediaQueryList) => {
+      setIsMobile(e.matches)
+      setShowClickHint(!e.matches)
+    }
     setIsMobile(mq.matches)
+    setShowClickHint(!mq.matches)
     if (mq.addEventListener) mq.addEventListener('change', handle as any)
     else mq.addListener(handle as any)
     return () => {
@@ -459,6 +464,56 @@ export function SkillsSection() {
             border-color: var(--text-accent);
             box-shadow: 0 0 15px rgba(200, 107, 60, 0.3);
           }
+
+          .click-hint {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+          }
+
+          .click-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+            border: 1px solid var(--surface-border);
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            cursor: pointer;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+            transition: transform 0.18s ease, box-shadow 0.18s ease;
+          }
+
+          .click-pill:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+          }
+
+          .click-icon { font-size: 1.05rem; }
+
+          .click-text { font-weight: 600; color: var(--text-body); }
+
+          .click-chev {
+            margin-left: 6px;
+            color: var(--text-accent);
+            font-weight: 700;
+            display: inline-block;
+            transform-origin: center;
+            animation: slideChevron 1.6s infinite;
+          }
+
+          @keyframes slideChevron {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(6px); }
+            100% { transform: translateX(0); }
+          }
+
+          @media (max-width: 768px) {
+            .click-pill { font-size: 0.9rem; padding: 7px 12px; gap: 8px; }
+            .click-icon { font-size: 0.95rem }
+          }
         `}</style>
         <div style={{ display: "flex", flexDirection: "column" }}>
           
@@ -474,6 +529,22 @@ export function SkillsSection() {
               height: '1px'
             }} />
           </div>
+
+          {showClickHint && !isMobile && (
+            <div className="click-hint" role="note" aria-live="polite">
+              <div
+                className="click-pill"
+                onClick={() => {
+                  const el = document.getElementById('skills')
+                  if (el) window.scrollTo({ top: el.offsetTop - 20, behavior: 'smooth' })
+                }}
+                title={t.skills.clickHint}
+              >
+                <span className="click-icon">🖱️</span>
+                <span className="click-text">{t.skills.clickHint}</span>
+              </div>
+            </div>
+          )}
 
           {/* Mobile Grid View */}
           <div className="mobile-skills-grid">
@@ -510,7 +581,7 @@ export function SkillsSection() {
                 <div
                   key={index}
                   className="category-hexagon"
-                  onClick={() => setSelectedCategory(index)}
+                  onClick={() => { setSelectedCategory(index); setShowClickHint(false) }}
                 >
                   <div 
                     className="category-hexagon-inner"
@@ -542,6 +613,7 @@ export function SkillsSection() {
                         style={{
                           animationDelay: `${idx * 0.08}s`
                         }}
+                        onClick={() => setShowClickHint(false)}
                       >
                         <div className="skill-hexagon-inner">
                           <div className="skill-text">{skill}</div>

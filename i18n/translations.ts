@@ -257,6 +257,8 @@ export const translations = {
           ],
         },
       ]
+      ,
+      clickHint: "Click a category to view my skills"
     },
     contact: {
       title: "Contact",
@@ -537,6 +539,8 @@ export const translations = {
           ],
         },
       ]
+      ,
+      clickHint: "Sélectionnez une catégorie pour voir mes compétences"
     },
     contact: {
       title: "Contact",
