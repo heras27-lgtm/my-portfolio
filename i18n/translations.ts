@@ -139,8 +139,7 @@ export const translations = (() => {
             slug: "section-paloise",
             image: "/section.png",
             mobile: {
-              description: "Data exploration project for Section Paloise.",
-              tech: ["Python", "Data Analysis", "Matplotlib", "Pandas"]
+              description: "Data exploration project for Section Paloise."
             }
           },
           {
@@ -150,8 +149,7 @@ export const translations = (() => {
             slug: "clermont-foot-63",
             image: "/clermontfoot.png",
             mobile: {
-              description: "Football data analysis for Clermont Foot 63.",
-              tech: ["Python", "Data Cleaning", "Matplotlib", "Pandas"]
+              description: "Football data analysis for Clermont Foot 63."
             }
           },
           {
@@ -161,8 +159,7 @@ export const translations = (() => {
             slug: "hays-manchester-city",
             image: "/hays.jpeg",
             mobile: {
-              description: "Data analysis web app for Manchester City coaches.",
-              tech: ["Data Analysis", "Dashboards"]
+              description: "Data analysis web app for Manchester City coaches."
             }
           },
           {
@@ -172,8 +169,7 @@ export const translations = (() => {
             slug: "bpce-solutions-informatiques",
             image: "/BPCESI.jpeg",
             mobile: {
-              description: "AI tool for web accessibility testing (RGAA).",
-              tech: ["Python", "Multimodal LLMs", "Azure OpenAI"]
+              description: "AI tool for web accessibility testing (RGAA)."
             }
           },
           {
@@ -183,8 +179,7 @@ export const translations = (() => {
             slug: "kerdos-energy-chatbot",
             image: "/kerdos.png",
             mobile: {
-              description: "RAG-powered AI chatbot with semantic search.",
-              tech: ["Python", "Hugging Face", "Weaviate"]
+              description: "RAG-powered AI chatbot with semantic search."
             }
           },
           {
@@ -194,8 +189,7 @@ export const translations = (() => {
             slug: "alstom-metro-operations",
             image: "/Alstom.png",
             mobile: {
-              description: "Metro passenger flow simulation with GNNs.",
-              tech: ["Python", "Dijkstra's Algorithm", "GNNs"]
+              description: "Metro passenger flow simulation with GNNs."
             }
           },
           {
@@ -205,8 +199,7 @@ export const translations = (() => {
             slug: "bk-biet-project",
             image: "/BKbiet.jpeg",
             mobile: {
-              description: "CNN model for brain tumor detection.",
-              tech: ["Python", "TensorFlow", "CNNs"]
+              description: "CNN model for brain tumor detection."
             }
           },
         ]
@@ -413,8 +406,7 @@ export const translations = (() => {
             slug: "section-paloise",
             image: "/section.png",
             mobile: {
-              description: "Visualisation de données pour Section Paloise.",
-              tech: ["Python", "Analyse de données", "Matplotlib", "Seaborn"]
+              description: "Visualisation de données pour Section Paloise."
             }
           },
           {
@@ -424,8 +416,7 @@ export const translations = (() => {
             slug: "clermont-foot-63",
             image: "/clermontfoot.png",
             mobile: {
-              description: "Analyse de données football pour Clermont Foot 63.",
-              tech: ["Python", "Nettoyage de données", "Matplotlib", "Pandas"]
+              description: "Analyse de données football pour Clermont Foot 63."
             }
           },
           {
@@ -435,8 +426,7 @@ export const translations = (() => {
             slug: "hays-manchester-city",
             image: "/hays.jpeg",
             mobile: {
-              description: "Application web d'analyse pour coachs Manchester City.",
-              tech: ["Analyse de données", "Tableaux de bord"]
+              description: "Application web d'analyse pour coachs Manchester City."
             }
           },
           {
@@ -446,8 +436,7 @@ export const translations = (() => {
             slug: "bpce-solutions-informatiques",
             image: "/BPCESI.jpeg",
             mobile: {
-              description: "Outil IA pour tests d'accessibilité web (RGAA).",
-              tech: ["Python", "LLMs Multimodaux", "Azure OpenAI"]
+              description: "Outil IA pour tests d'accessibilité web (RGAA)."
             }
           },
           {
@@ -457,8 +446,7 @@ export const translations = (() => {
             slug: "kerdos-energy-chatbot",
             image: "/kerdos.png",
             mobile: {
-              description: "Chatbot IA avec RAG et recherche sémantique.",
-              tech: ["Python", "Hugging Face", "Weaviate"]
+              description: "Chatbot IA avec RAG et recherche sémantique."
             }
           },
           {
@@ -468,8 +456,7 @@ export const translations = (() => {
             slug: "alstom-metro-operations",
             image: "/Alstom.png",
             mobile: {
-              description: "Simulation flux passagers métro avec GNNs.",
-              tech: ["Python", "Algorithme de Dijkstra", "GNNs"]
+              description: "Simulation flux passagers métro avec GNNs."
             }
           },
           {
@@ -479,8 +466,7 @@ export const translations = (() => {
             slug: "bk-biet-project",
             image: "/BKbiet.jpeg",
             mobile: {
-              description: "Modèle CNN pour détection de tumeur cérébrale.",
-              tech: ["Python", "TensorFlow", "CNNs"]
+              description: "Modèle CNN pour détection de tumeur cérébrale."
             }
           },
         ]
