@@ -109,6 +109,23 @@ export const translations = {
           mobileTimeline: "Managed Excel files and SAP software for gas operations monitoring."
         }
       ]
+      ,
+      statsDescriptions: [
+        [
+          'employees supported',
+          'investment influenced',
+          'digital transformation'
+        ],
+        [
+          'query optimization',
+          'database architecture',
+          'dashboards created'
+        ],
+        [
+          'software management',
+          'data tracking'
+        ]
+      ]
     },
     projects: {
       title: "Projects",
@@ -371,6 +388,23 @@ export const translations = {
           mobileTech: ["Excel", "SAP"],
           mobileTimeline: "Gestion fichiers Excel et logiciel SAP pour suivi opérations gaz."
         }
+      ]
+      ,
+      statsDescriptions: [
+        [
+          'employés pris en charge',
+          "investissement influencé",
+          'transformation numérique'
+        ],
+        [
+          "optimisation des requêtes",
+          'architecture de base de données',
+          'tableaux de bord créés'
+        ],
+        [
+          'gestion de logiciel',
+          'suivi des données'
+        ]
       ]
     },
     projects: {

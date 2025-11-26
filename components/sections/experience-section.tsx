@@ -24,22 +24,25 @@ export function ExperienceSection() {
   }
 
   const getJobStats = (idx: number) => {
+    // Use translations for stat descriptions when available
+    const descs = (t.experience as any)?.statsDescriptions || []
     const stats = [
       [
-        { icon: '👥', label: '1000+', desc: 'employees supported' },
-        { icon: '💰', label: '€100k+', desc: 'investment influenced' },
-        { icon: '🚀', label: '€4M+', desc: 'digital transformation' }
+        { icon: '👥', label: '1000+', desc: descs[0]?.[0] ?? 'employees supported' },
+        { icon: '💰', label: '€100k+', desc: descs[0]?.[1] ?? 'investment influenced' },
+        { icon: '🚀', label: '€4M+', desc: descs[0]?.[2] ?? 'digital transformation' }
       ],
       [
-        { icon: '⚡', label: '48h → 30s', desc: 'query optimization' },
-        { icon: '🗄️', label: 'SQL', desc: 'database architecture' },
-        { icon: '📊', label: 'Power BI', desc: 'dashboards created' }
+        { icon: '⚡', label: '48h → 30s', desc: descs[1]?.[0] ?? 'query optimization' },
+        { icon: '🗄️', label: 'SQL', desc: descs[1]?.[1] ?? 'database architecture' },
+        { icon: '📊', label: 'Power BI', desc: descs[1]?.[2] ?? 'dashboards created' }
       ],
       [
-        { icon: '🔧', label: 'SAP', desc: 'software management' },
-        { icon: '📋', label: 'Excel', desc: 'data tracking' }
+        { icon: '🔧', label: 'SAP', desc: descs[2]?.[0] ?? 'software management' },
+        { icon: '📋', label: 'Excel', desc: descs[2]?.[1] ?? 'data tracking' }
       ]
     ]
+
     return stats[idx] || []
   }
 
