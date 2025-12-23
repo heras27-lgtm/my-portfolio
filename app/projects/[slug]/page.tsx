@@ -75,12 +75,55 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
           </Link>
 
           
-          <h1 className="font-bold" style={{ 
-            color: 'var(--text-primary)',
-            fontSize: "clamp(1.75rem, 4vw, 3.5rem)",
-            marginBottom: "1%"
-          }}>
-            {projectContent.title}
+          <h1 className="font-bold project-title-stylish" style={{ marginBottom: "1%" }}>
+            <style>{`
+              .project-title-stylish {
+                font-size: clamp(1.75rem, 4vw, 3.5rem);
+                line-height: 1.02;
+                letter-spacing: -0.02em;
+                position: relative;
+                display: inline-block;
+                padding-bottom: 0.35rem;
+                font-family: Georgia, 'Times New Roman', serif;
+                font-weight: 900;
+              }
+              .project-title-stylish .gradient {
+                background: linear-gradient(90deg, var(--text-accent), var(--accent-2, #f97316));
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                font-weight: 900;
+                text-transform: none;
+              }
+              .project-title-stylish::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 6px;
+                width: 40%;
+                background: linear-gradient(90deg, rgba(0,0,0,0.08), rgba(0,0,0,0));
+                border-radius: 4px;
+                transform-origin: left center;
+                transition: width 420ms cubic-bezier(.2,.9,.2,1);
+                opacity: 0.9;
+              }
+              .project-title-stylish:hover::after { width: 100%; }
+              .project-title-stylish .subtitle-badge {
+                display: inline-block;
+                margin-left: 0.8rem;
+                font-size: 0.7rem;
+                padding: 0.18rem 0.5rem;
+                border-radius: 999px;
+                background: var(--chip-bg);
+                color: var(--text-accent);
+                border: 1px solid var(--chip-border);
+                vertical-align: middle;
+                font-weight: 700;
+              }
+            `}</style>
+            <span className="gradient">{projectContent.title}</span>
+            <span className="subtitle-badge">{projectMeta.role}</span>
           </h1>
 
           
@@ -140,12 +183,14 @@ export default function ProjectPage({ params }: { params: Promise<{ slug: string
 
           
           <div style={{ display: "flex", flexDirection: "column", gap: "2vh" }}>
-            <h2 className="font-bold" style={{ 
-              color: 'var(--text-primary)',
-              fontSize: "clamp(1.3rem, 2vw, 2rem)"
-            }}>
-              {t.projectPage.overview}
-            </h2>
+            <div className="section-label">
+              <style>{`
+                .section-label { display: inline-block; margin-bottom: 0.6rem; }
+                .section-label .label-text { font-size: 0.85rem; font-weight: 700; color: var(--text-secondary); background: var(--chip-bg); padding: 6px 10px; border-radius: 999px; border: 1px solid var(--chip-border); }
+                @media (min-width: 640px) { .section-label { margin-bottom: 1rem; } }
+              `}</style>
+              <span className="label-text">{t.projectPage.overview}</span>
+            </div>
             <div
               style={{ 
                 color: 'var(--text-body)',

@@ -130,6 +130,8 @@ export const translations = (() => {
       },
       projects: {
         title: "Projects",
+        modalDescription: "Description",
+        modalSkillsGained: "Skills gained",
         viewProject: "View Project",
         list: [
           {
@@ -138,6 +140,8 @@ export const translations = (() => {
             tech: ["Python", "Data Analysis", "Data Visualization", "Matplotlib", "Seaborn", "Pandas", "NumPy"],
             slug: "section-paloise",
             image: "/section.png",
+            demo: "",
+            github: "",
             mobile: {
               description: "Data exploration project for Section Paloise."
             }
@@ -148,6 +152,8 @@ export const translations = (() => {
             tech: ["Python", "Data Cleaning", "Data Visualization", "Matplotlib", "Pandas", "NumPy"],
             slug: "clermont-foot-63",
             image: "/clermontfoot.png",
+            demo: "",
+            github: "",
             mobile: {
               description: "Football data analysis for Clermont Foot 63."
             }
@@ -158,6 +164,8 @@ export const translations = (() => {
             tech: ["Data Analysis", "Needs assessment", "Dashboards", "Data Visualization"],
             slug: "hays-manchester-city",
             image: "/hays.jpeg",
+            demo: "https://www.youtube.com/watch?v=xkA2I64WxG0",
+            github: "",
             mobile: {
               description: "Data analysis web app for Manchester City coaches."
             }
@@ -168,6 +176,8 @@ export const translations = (() => {
             tech: ["Python", "Multimodal LLMs", "Azure OpenAI", "BLIP-2", "APIs"],
             slug: "bpce-solutions-informatiques",
             image: "/BPCESI.jpeg",
+            demo: "",
+            github: "https://github.com/eleejahroudier/BPCEproject",
             mobile: {
               description: "AI tool for web accessibility testing (RGAA)."
             }
@@ -178,6 +188,8 @@ export const translations = (() => {
             tech: ["Python", "Hugging Face", "APIs", "Weaviate", "Docker", "Docling"],
             slug: "kerdos-energy-chatbot",
             image: "/kerdos.png",
+            demo: "",
+            github: "https://github.com/BOupdown/Kerdos",
             mobile: {
               description: "RAG-powered AI chatbot with semantic search."
             }
@@ -188,6 +200,8 @@ export const translations = (() => {
             tech: ["Python", "Dijkstra's Algorithm", "Graph Neural Networks", "Simulation", "Data Visualization", "Company needs understanding"],
             slug: "alstom-metro-operations",
             image: "/Alstom.png",
+            demo: "",
+            github: "https://github.com/marcodamecourt/data_chall_alstom",
             mobile: {
               description: "Metro passenger flow simulation with GNNs."
             }
@@ -198,6 +212,8 @@ export const translations = (() => {
             tech: ["Python", "TensorFlow", "Keras", "Medical Imaging", "CNNs", "PyTorch", "NumPy", "Pandas", "Scikit-learn"],
             slug: "bk-biet-project",
             image: "/BKbiet.jpeg",
+            demo: "",
+            github: "",
             mobile: {
               description: "CNN model for brain tumor detection."
             }
@@ -397,6 +413,8 @@ export const translations = (() => {
       },
       projects: {
         title: "Projets",
+        modalDescription: "Description",
+        modalSkillsGained: "Compétences gagnées",
         viewProject: "Voir le Projet",
         list: [
           {
@@ -405,6 +423,8 @@ export const translations = (() => {
             tech: ["Python", "Analyse de données", "Visualisation de données", "Matplotlib", "Seaborn", "Pandas", "NumPy"],
             slug: "section-paloise",
             image: "/section.png",
+            demo: "", 
+            github: "",
             mobile: {
               description: "Visualisation de données pour Section Paloise."
             }
@@ -415,6 +435,8 @@ export const translations = (() => {
             tech: ["Python", "Nettoyage de données", "Visualisation de données", "Matplotlib", "Pandas", "NumPy"],
             slug: "clermont-foot-63",
             image: "/clermontfoot.png",
+            demo: "", 
+            github: "",
             mobile: {
               description: "Analyse de données football pour Clermont Foot 63."
             }
@@ -425,6 +447,8 @@ export const translations = (() => {
             tech: ["Analyse de données", "Évaluation des besoins", "Tableaux de bord", "Visualisation de données"],
             slug: "hays-manchester-city",
             image: "/hays.jpeg",
+            demo: "https://www.youtube.com/watch?v=xkA2I64WxG0", 
+            github: "",
             mobile: {
               description: "Application web d'analyse pour coachs Manchester City."
             }
@@ -435,6 +459,8 @@ export const translations = (() => {
             tech: ["Python", "LLMs Multimodaux", "Azure OpenAI", "BLIP-2", "APIs"],
             slug: "bpce-solutions-informatiques",
             image: "/BPCESI.jpeg",
+            demo: "", 
+            github: "https://github.com/eleejahroudier/BPCEproject",
             mobile: {
               description: "Outil IA pour tests d'accessibilité web (RGAA)."
             }
@@ -445,6 +471,8 @@ export const translations = (() => {
             tech: ["Python", "Hugging Face", "APIs", "Weaviate", "Docker", "Docling"],
             slug: "kerdos-energy-chatbot",
             image: "/kerdos.png",
+            demo: "", 
+            github: "https://github.com/BOupdown/Kerdos",
             mobile: {
               description: "Chatbot IA avec RAG et recherche sémantique."
             }
@@ -455,6 +483,8 @@ export const translations = (() => {
             tech: ["Python", "Algorithme de Dijkstra", "Réseaux de neurones graphiques", "Simulation", "Visualisation de données", "Compréhension des besoins de l'entreprise"],
             slug: "alstom-metro-operations",
             image: "/Alstom.png",
+            demo: "", 
+            github: "https://github.com/marcodamecourt/data_chall_alstom",
             mobile: {
               description: "Simulation flux passagers métro avec GNNs."
             }
@@ -465,6 +495,8 @@ export const translations = (() => {
             tech: ["Python", "TensorFlow", "Keras", "Imagerie médicale", "CNNs", "PyTorch", "NumPy", "Pandas", "Scikit-learn"],
             slug: "bk-biet-project",
             image: "/BKbiet.jpeg",
+            demo: "", 
+            github: "",
             mobile: {
               description: "Modèle CNN pour détection de tumeur cérébrale."
             }
